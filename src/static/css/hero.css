@@ -1,0 +1,168 @@
+:root{
+    --bg-color: #000;
+    --typewriterSpeed: 5s;
+    --typewriterSpeedMovilFast:1.8s;
+    --typewriterSpeedMovilSlow:2.7s;
+    --typewriterSpeedFast: 1.2s;
+    --typewriterInitialDelay:1s;
+    --typewriterGreetingCharacters: 6;
+    --typewriterTitleCharacters: 34;
+    --typewriterMovilTitleCharacters: 10;
+    --typewriterMovilTitle2Characters: 15;
+    --fadeInUpTextDelay: calc(var(--typewriterSpeed) + var(--typewriterInitialDelay));
+    --fadeInUpMovilTextDelay: calc( var(--typewriterSpeedMovilFast) + var(--typewriterSpeedMovilSlow) + var(--typewriterSpeedFast) + var(--typewriterInitialDelay) + 0.5s);
+
+} 
+h1{
+    font-family:  "Source Code Pro", monospace;
+    position: relative;
+    
+    font-size: 28px;
+    
+}
+
+h1::before,
+h1::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+#greeting::before{
+    background-color: var(--bg-color);
+    animation: typewriter var(--typewriterSpeedFast) steps(var(--typewriterGreetingCharacters)) var(--typewriterInitialDelay) forwards;
+}
+
+#greeting::after{
+    width: .125em;
+    background-color: #000;
+    animation: 
+        typewriter var(--typewriterSpeedFast) steps(var(--typewriterGreetingCharacters)) var(--typewriterInitialDelay) forwards,
+        blink 800ms steps(var(--typewriterGreetingCharacters)) 3 alternate;
+
+}
+
+
+
+
+#titleMovil::before{
+    background-color: var(--bg-color);
+    animation: typewriter var(--typewriterSpeedMovilFast) steps(var(--typewriterMovilTitleCharacters)) calc(var(--typewriterSpeedFast) + var(--typewriterInitialDelay)) forwards;
+}
+
+#titleMovil::after{
+    width: .125em;
+    background-color: #000;
+    animation: 
+        typewriter var(--typewriterSpeedMovilFast) steps(var(--typewriterMovilTitleCharacters)) calc(var(--typewriterSpeedFast) + var(--typewriterInitialDelay)) forwards,
+        blink 400ms steps(var(--typewriterMovilTitleCharacters))  calc(var(--typewriterInitialDelay) + var(--typewriterSpeedFast))  5 alternate;
+
+}
+
+
+
+#titleMovil2::before{
+    background-color: var(--bg-color);
+    animation: typewriter var(--typewriterSpeedMovilSlow) steps(var(--typewriterMovilTitle2Characters)) calc(var(--typewriterSpeedFast) + var(--typewriterSpeedMovilFast) + var(--typewriterInitialDelay)) forwards;
+}
+
+#titleMovil2::after{
+    width: .125em;
+    background-color: #000;
+    animation: 
+        typewriter var(--typewriterSpeedMovilSlow) steps(var(--typewriterMovilTitle2Characters)) calc(var(--typewriterSpeedFast) + var(--typewriterSpeedMovilFast) + var(--typewriterInitialDelay)) forwards,
+        blink 700ms steps(var(--typewriterMovilTitle2Characters))  calc( var(--typewriterInitialDelay) + var(--typewriterSpeedFast)  + var(--typewriterSpeedMovilFast) )  infinite;
+
+}
+
+
+
+#title::before{
+    background-color: var(--bg-color);
+    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterTitleCharacters)) var(--typewriterInitialDelay) forwards;
+}
+
+#title::after{
+    width: .125em;
+    background-color: #000;
+    animation: 
+        typewriter var(--typewriterSpeed) steps(var(--typewriterTitleCharacters)) var(--typewriterInitialDelay) forwards,
+        blink 800ms steps(var(--typewriterTitleCharacters))  var(--typewriterInitialDelay) infinite;
+
+}
+
+#downBtnMovil{
+    transform: translateY(3rem);
+    opacity: 0;
+    animation: fadeInUp 2s ease calc(var(--fadeInUpMovilTextDelay) + 0.5s) forwards; 
+}
+
+#downBtn{
+    transform: translateY(3rem);
+    opacity: 0;
+    animation: fadeInUp 2s ease calc(var(--fadeInUpTextDelay) + 0.5s) forwards; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes typewriter {
+    to{
+        left:100%;
+    }
+    
+}
+
+@keyframes blink {
+    to{
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+.subtitle{
+    font-family:  "Source Code Pro", monospace;
+    font-size: 25px;
+    margin-top: 10px;
+    transform: translateY(3rem);
+    opacity: 0;
+    animation: fadeInUp 2s ease var(--fadeInUpTextDelay) forwards; 
+    
+}
+
+.subtitleMovil{
+    font-family:  "Source Code Pro", monospace;
+    margin-top: 10px;
+    transform: translateY(3rem);
+    opacity: 0;
+    animation: fadeInUp 2s ease var(--fadeInUpMovilTextDelay) forwards; 
+    
+}
+
+@keyframes fadeInUp {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
