@@ -11,6 +11,7 @@ const useStyles = makeStyles(theme=>({
         minHeight: '100vh',
         color: "#fff",
         fontFamily: '"Source Code Pro" , monospace',
+        textShadow: '0 0 0.35em #1ABC9C'
     },
     toolbar: theme.mixins.toolbar,
     downBtn:{

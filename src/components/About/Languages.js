@@ -24,9 +24,20 @@ const useStyles = makeStyles(theme=>({
     },*/
     //toolbar: theme.mixins.toolbar,
     imgLogo:{
-            width:"50px",
+            width:"70px",
 
-    }
+    },
+    textTitle:{
+        fontFamily: '"Source Code Pro" , monospace',
+        
+    },
+    glitchTitle:{
+        fontFamily: '"Source Code Pro" , monospace',
+        color: '#fff',
+        textShadow: '0 0 0.35em #1ABC9C'
+           
+    },
+    
 
 
     
@@ -49,9 +60,13 @@ const classes = useStyles()
                
                 
              <div className="d-flex flex-column align-items-center justify-content-center text-center ">
-                <div>
+        
                    
-             <h6 className="mt-4">Languages</h6>   
+             <h5 className={classes.glitchTitle}>
+                
+                     Languages
+                
+             </h5>   
              <div className="row mt-3">
                 <div className="col">
                         <img src={javascriptLogo} 
@@ -61,70 +76,70 @@ const classes = useStyles()
                 </div>
                
                 <div className="col">
-                        <img src={pythonLogo} width="50" />
+                        <img src={pythonLogo} width="70" />
                 </div>
               
                 </div>
                 <div className="row mt-1">
 
                 <div className="col">
-                <img src={javaLogo} width="80" />
+                <img src={javaLogo} width="90" />
   
   
                 </div>
                 <div className="col">
-                        <img src={phpLogo} width="70" className="mt-3" />
+                        <img src={phpLogo} width="80" className="mt-3" />
                 </div>
                
 
         </div>
   
 
-        <h6 className="mt-4">
+        <h5 className={classes.glitchTitle}>
          Frontend Frameworks
-        </h6>
+        </h5>
         <div className="row">
                 <div className="col">
-                        <img src={reactLogo} width="70" />
-                        <img src={angularLogo} width="70" />
+                        <img src={reactLogo} width="90" />
+                        <img src={angularLogo} width="90" />
                 </div>
 
         </div>
-        <h6 className="mt-4">
+        <h5 className={classes.glitchTitle}>
          Backend Frameworks
-        </h6>
+        </h5>
         <div className="row">
                 <div className="col">
                 
-                        <img src={djangoLogo} width="90" />
+                        <img src={djangoLogo} width="100" />
                         </div>
                         <div className="col">
-                        <img src={laravelLogo} width="90" />
+                        <img src={nodeLogo} width="100" />
                         </div>
                         
 
         </div>
         <div className="row">
         <div className="col">
-                        <img src={nodeLogo} width="90" />
+                        <img src={laravelLogo} width="110" />
                         </div>
         </div>
         
        
-        <h6 className="mt-4">
-         Databases:
-        </h6>
+        <h5 className={classes.glitchTitle}>
+         Databases
+        </h5>
         <div className="row">
                 <div className="col">
-                        <img src={postgresqlLogo} width="50" />
+                        <img src={postgresqlLogo} width="70" />
                         </div>
                 <div className="col">
-                        <img src={mysqlLogo} width="80" />
+                        <img src={mysqlLogo} width="90" />
                         </div>
                 </div>
                 <div className="row">
                 <div className="col">
-                        <img src={mongodbLogo} width="50" />
+                        <img src={mongodbLogo} width="70" />
                         </div>
                 </div>
 
@@ -133,7 +148,7 @@ const classes = useStyles()
        
 
 
-            </div>
+            
              </div>
         </div> 
     )

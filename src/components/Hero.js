@@ -29,6 +29,7 @@ const useStyles = makeStyles(theme=>({
         alignItems: 'center',
         color: 'white',
         backgroundColor: '#000',
+        textShadow: '0 0 0.35em #1ABC9C'
        
     },
     downBtn:{

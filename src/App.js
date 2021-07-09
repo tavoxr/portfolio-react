@@ -5,6 +5,7 @@ import { grey } from '@material-ui/core/colors'
 import Header from './components/Header'
 import About from './components/About'
 import Projects from './components/Projects'
+import Contact from './components/Contact'
 
 const useStyles = makeStyles(theme =>({
  
@@ -20,6 +21,8 @@ function App() {
           <Header/>
           <About/>
           <Projects/>
+          <Contact/>
+          
          
 
     </ThemeProvider>

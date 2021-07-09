@@ -1,0 +1,11 @@
+#cardForm{
+    background-color: #1E1F1F ;
+    color: #fff;
+    
+}
+
+label{
+    font-family: "Source Code Pro" , monospace;
+    text-shadow: 0 0 0.35em #1ABC9C;
+    
+}
