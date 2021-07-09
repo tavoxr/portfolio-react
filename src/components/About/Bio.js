@@ -1,52 +1,95 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core'
+import { IconButton } from '@material-ui/core'
+import {useMediaQuery} from 'react-responsive'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles  = makeStyles(theme =>({
+       
 
 
-        imgContainer:{
-                width: '180px',
-                
+        imgContainerMobile:{
+                width: '150px',
                 backgroundColor: '#000',
         },
-photoBio:{
+        photoBioMobile:{
+                width: '100%',
+                borderRadius: '50%'
+        },
+        bioTextMobile:{
+                fontFamily: '"Source Code Pro" , monospace',
+                textAlign: 'center',
+                marginTop: '20px',
+},
+imgContainerTablet:{
+        width: '250px',
+        backgroundColor: '#000',
+},
+photoBioTablet:{
         width: '100%',
         borderRadius: '50%'
-}
+},
+bioTextTablet:{
+        fontFamily: '"Source Code Pro" , monospace',
+        textAlign: 'center',
+        marginTop: '20px',
+        fontSize: '34px',
+},
+imgContainerLaptop:{
+        width: '650px',
+        backgroundColor: '#000',
+},
+photoBioLaptop:{
+        width: '100%',
+        borderRadius: '10%'
+},
+bioTextLaptop:{
+        fontFamily: '"Source Code Pro" , monospace',
+        textAlign: 'center',
+        marginTop: '20px',
+        fontSize: '100px',
+},
 
 }))
-function Bio(){
+function Bio(props){
 const classes = useStyles()
+//const isMobile = useMediaQuery({query: '(max-width:480px)'})
+//const isTablet = useMediaQuery({query: '(min-device-width: 481px)'})
+//const isLaptop = useMediaQuery({query: '(min-device-width:800px )'})
 
-
+        const {screen} = props
+        const {imgContainerMobile,imgContainerTablet,imgContainerLaptop,
+                photoBioMobile,photoBioTablet,photoBioLaptop,
+               bioTextMobile, bioTextTablet,bioTextLaptop} = classes
     return(
+            
         <React.Fragment>
-        <div className="d-flex flex-column align-items-center justify-content-center  ">
-        <h1>
-
-        </h1>
-        <div className={classes.imgContainer} >
-                <img className={classes.photoBio}  src="https://scontent.fgua9-1.fna.fbcdn.net/v/t1.6435-9/82942322_103057337907296_1140940809298771968_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=5382yvZD5V0AX_8iG0M&_nc_ht=scontent.fgua9-1.fna&oh=f55a54f6538f94ef897231bfac0395db&oe=60EBEF51" />
+        
+        
+        <React.Fragment>
+        <div className={ screen == "isMobile" ? imgContainerMobile: 
+                         screen == "isTablet" ? imgContainerTablet: null  } >
+                <img className={screen == "isMobile" ? photoBioMobile:
+                                screen == "isTablet" ? photoBioTablet: null }  
+                     src="https://scontent.fgua9-1.fna.fbcdn.net/v/t1.6435-9/82942322_103057337907296_1140940809298771968_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=5382yvZD5V0AX_8iG0M&_nc_ht=scontent.fgua9-1.fna&oh=f55a54f6538f94ef897231bfac0395db&oe=60EBEF51" 
+                />
         </div>
-        <p className="mt-4 text-center">
-        I'm Gustavo Herrera a software developer from Guatemala and everything I've learned about frontend has been on my own by online courses and scolarship obtained by Platzi.
-        </p>
+        <p className={ screen == "isMobile" ? bioTextMobile: 
+                       screen == "isTablet" ? bioTextTablet: null 
+                     }>
+        I'm a software developer from Guatemala and everything I've learned about web development has been on my own by online courses and a scholarship by Platzi and Facebook Developer Circles in 2019.
 
-        <p className="text-center">
-        At this moment I'm studing software development at Galileo University and I've been working with programming languages such as JavaScript, Python, PHP, Java and frameworks like Django, Node, Laravel, React, Angular .
         </p>
-        <div className="row">
-                <div className="col">
-                        <img src="../../static/images/JavaScript-logo.png" />
-                </div>
-
-        </div>
-        <p>
-         And frameworks like:
+        <p className={ screen == "isMobile" ? bioTextMobile: 
+                       screen == "isTablet" ? bioTextTablet: null}>
+        At this moment I'm studing software development at Galileo University. I've been working with different technologies such as:
         </p>
+       
+        </React.Fragment>
+        
 
-        <h6>click to check my projects</h6>
-                </div>
+
+
         </React.Fragment>
     )
 }
