@@ -2,6 +2,8 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core'
 import  emailjs from 'emailjs-com' 
 import '../static/css/cardForm.css'
+import swal from 'sweetalert'
+
 const useStyles = makeStyles(theme=>({
     root:{
         minHeight: '100vh',
@@ -78,33 +80,40 @@ function Contact(){
     function sendEmail(e) {
         e.preventDefault();
     
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+        emailjs.sendForm('service_s15cnxd', 'template_juftbjv', e.target, 'user_vo8oTKksnUIf1DA7Aws7k')
           .then((result) => {
               console.log(result.text);
+              swal({
+                  icon: "success",
+
+              })
           }, (error) => {
               console.log(error.text);
           });
+          e.target.reset()
       }
     
     return(
         <React.Fragment>
             <div className={classes.root} id="contact">
                 <div className={classes.toolbar}></div>
+                <div className="container">
                 <div className="d-flex flex-column justify-content-center align-items-center">
                 <h1 className={classes.glitchTitle}><span>Contact</span>Contact<span>Contact</span></h1>
-                    <div className="row">
+                
+                <h3>Checkout my social networks</h3>
 
                     
                     <div className="card card-body col-12" id="cardForm">
-                    <form className={classes.form}>
+                    <form className={classes.form} onSubmit={sendEmail}>
                         <div className="mb-3">
                         <label className="form-label" for="name"  >Name:</label>
-                        <input type="text" className="form-control" id="name" name="name" />
+                        <input type="text" className="form-control" id="name" name="name" required />
 
                         </div>
                         <div className="mb-3">
                         <label className="form-label" for="email"  >Email:</label>
-                        <input type="email" className="form-control" id="email" name="email" />
+                        <input type="email" className="form-control" id="email" name="email" required />
 
                         </div>
                         <div className="mb-3">
@@ -112,8 +121,13 @@ function Contact(){
                         <textarea type="" className="form-control" id="message" name="message" rows="7" />
 
                         </div>
+                        <div className="mb-3">
+                        <button type="submit" className="form-control btn btn-success" id="submit" name="submitBtn">Send</button>
+
+                        </div>
                     </form>
                     </div>
+                    <button onClick={()=> swal({ title:"Message sent successfully",icon:"success"})}>Prueba</button>
                     </div>
                     
                 
