@@ -14,16 +14,20 @@ const useStyles  = makeStyles(theme =>({
         },
         photoBioMobile:{
                 width: '100%',
-                borderRadius: '50%'
+                borderRadius: '50%',
+                boxShadow: '0 0 0.5em salmon'
         },
         bioTextMobile:{
-                fontFamily: '"Source Code Pro" , monospace',
+                /*fontFamily: '"Source Code Pro" , monospace', */
+                fontFamily: '"Ubuntu Mono", monospace',
                 textAlign: 'center',
                 marginTop: '20px',
+                fontSize: '1.1em'
 },
 imgContainerTablet:{
         width: '250px',
         backgroundColor: '#000',
+       
 },
 photoBioTablet:{
         width: '100%',

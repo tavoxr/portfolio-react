@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme=>({
     glitchTitle:{
         textTransform: 'uppercase',
         fontFamily: '"Source Code Pro" , monospace',
-        textShadow: '0.05em 0 0 rgba(26, 188, 156, 0.75), -0.025em -0.05em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75 )',
+        textShadow: '0.05em 0 0 rgba(255 ,0 ,0 , 0.75), -0.025em -0.05em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75 )',
         animation: "$glitch 750ms infinite",
         position: 'relative',
         fontSize: '2rem',

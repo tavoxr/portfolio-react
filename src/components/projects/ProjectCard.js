@@ -15,13 +15,22 @@ const useStyles = makeStyles(theme=> ({
       maxWidth: 545,
       marginTop:'15px',
       backgroundColor: '#1E1F1F',
-
-      color: '#fff',
-      
-      
     },
+   
+
+
+
+
+
+
+
+
+
+
     media: {
       height: 240,
+      clipPath: 'polygon(0 0, 100% 0, 100% 85%,0 100%)',
+      borderBottomLeftRadius: '5px'
     },
     textCard:{
       fontFamily: '"Source Code Pro" , monospace',
@@ -36,8 +45,18 @@ function ProjectCard(){
     return(
         <React.Fragment>
     <div className="col-12">
-                
+
+
+    
+    
+    
+
+    
     <Card className={classes.root}>
+     {/* <span></span>
+      <span></span>
+      <span></span>
+     <span></span> */}
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -65,6 +84,7 @@ function ProjectCard(){
         
       </CardActions>
     </Card>
+    
     </div>
 
 

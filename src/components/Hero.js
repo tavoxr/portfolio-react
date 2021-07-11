@@ -41,7 +41,9 @@ const useStyles = makeStyles(theme=>({
     },
     titleDesktop:{
       fontSize: '50px' ,
-    }
+     
+    },
+  
     
    
    

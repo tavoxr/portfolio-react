@@ -1,8 +1,11 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core'
+import { makeStyles, IconButton } from '@material-ui/core'
 import  emailjs from 'emailjs-com' 
 import '../static/css/cardForm.css'
 import swal from 'sweetalert'
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 const useStyles = makeStyles(theme=>({
     root:{
@@ -19,6 +22,7 @@ const useStyles = makeStyles(theme=>({
         animation: "$glitch 750ms infinite",
         position: 'relative',
         fontSize: '2rem',
+        marginBottom: '30px',
         "& span":{
             position: 'absolute',
             top: 0,
@@ -70,6 +74,18 @@ const useStyles = makeStyles(theme=>({
     formCard:{
         backgroundColor: '#1E1F1F'
     },
+    socialIcons:{
+        color: '#fff',
+        textShadow: '0 0 0.35em #1ABC9C',
+        fontSize: '50px',
+    },
+    subtitles:{
+        textAlign: 'center',
+        color: '#fff',
+        textShadow: '0 0 0.35em #1ABC9C',
+        fontFamily: '"Source Code Pro" , monospace',
+        marginBottom: '20px'
+    }
     
 
 
@@ -101,10 +117,24 @@ function Contact(){
                 <div className="d-flex flex-column justify-content-center align-items-center">
                 <h1 className={classes.glitchTitle}><span>Contact</span>Contact<span>Contact</span></h1>
                 
-                <h3>Checkout my social networks</h3>
+                <h3 className={classes.subtitles}>My social networks</h3>
+
+                   
 
                     
-                    <div className="card card-body col-12" id="cardForm">
+                    <IconButton aria-label="" >
+                        <GitHubIcon className={classes.socialIcons}/>
+                    </IconButton>
+                    <IconButton aria-label="" >
+                        <LinkedInIcon className={classes.socialIcons}/>
+                    </IconButton>
+                    <IconButton aria-label="" >
+                        <FacebookIcon className={classes.socialIcons}/>
+                    </IconButton>
+                    
+                    
+                    <div className="card card-body col-12 mt-4" id="cardForm">
+                    <h3 className={classes.subtitles}>Send me a message</h3>
                     <form className={classes.form} onSubmit={sendEmail}>
                         <div className="mb-3">
                         <label className="form-label" for="name"  >Name:</label>

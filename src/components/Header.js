@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core'
 import NavbarContainer from './NavbarContainer'
 import Hero from './Hero'
 
+
 const useStyles = makeStyles(theme=>({
     root:{
         backgroundColor:  '#000',
@@ -13,16 +14,22 @@ const useStyles = makeStyles(theme=>({
     toolbar: theme.mixins.toolbar,
 
 
+
 }))
 
 function Header(){
 const classes = useStyles()
 
     return(
+        
         <div className={classes.root}>
+            
             <NavbarContainer/>
+          
             <div className={classes.toolbar} ></div>
+            
            <Hero/>
+          
         </div>
             
     )

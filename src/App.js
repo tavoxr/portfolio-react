@@ -6,7 +6,6 @@ import Header from './components/Header'
 import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
-
 const useStyles = makeStyles(theme =>({
  
 
@@ -16,8 +15,8 @@ function App() {
   const classes = useStyles()
 
   return (
+    
     <ThemeProvider theme={theme}  >
-      
           <Header/>
           <About/>
           <Projects/>

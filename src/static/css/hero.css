@@ -156,6 +156,7 @@ h1::after{
     margin-top: 10px;
     transform: translateY(3rem);
     opacity: 0;
+    text-shadow: 0.5em 0.25em 0.5em salmon;
     animation: fadeInUp 2s ease var(--fadeInUpMovilTextDelay) forwards; 
     
 }
