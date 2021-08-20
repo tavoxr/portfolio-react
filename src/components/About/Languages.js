@@ -12,35 +12,38 @@ import angularLogo from '../../static/images/angularLogo.png'
 import postgresqlLogo from '../../static/images/postgresqlLogo.png'
 import mysqlLogo from '../../static/images/mysqlLogo.png'
 import mongodbLogo from '../../static/images/mongodb.png'
+import vueLogo from '../../static/images/vueLogo.png'
+import nativeLogo from '../../static/images/reactNativeLogo.png'
 
-
-
-const useStyles = makeStyles(theme=>({
-   /* root:{
-        backgroundColor:'#000',
-        minHeight: '100vh',
-        color: "#fff",
-        fontFamily: '"Source Code Pro" , monospace',
-    },*/
-    //toolbar: theme.mixins.toolbar,
-    imgLogo:{
-            width:"70px",
-
-    },
-    textTitle:{
-        fontFamily: '"Source Code Pro" , monospace',
+const useStyles = makeStyles(theme => ({
+        /* root:{
+             backgroundColor:'#000',
+             minHeight: '100vh',
+             color: "#fff",
+             fontFamily: '"Source Code Pro" , monospace',
+         },*/
+        //toolbar: theme.mixins.toolbar,
+        imgLogo: {
+                 
         
-    },
-    glitchTitle:{
-        fontFamily: '"Source Code Pro" , monospace',
-        color: '#fff',
-        textShadow: '0 0 0.35em #1ABC9C'
-           
-    },
-    
+                
+
+        },
+        languageTitle: {
+                fontSize: '24px',
+                fontWeight: 'bolder',
+                
+
+        },
+
+        frameworkCard:{
+                backgroundColor: '#F6F9FA',
+                boxShadow: '2px 2px 3px grey',
+                
+        }
 
 
-    
+
 
 
 
@@ -48,110 +51,111 @@ const useStyles = makeStyles(theme=>({
 
 
 
-function Languages(){
-const classes = useStyles()
+function Languages() {
+        const classes = useStyles()
 
-    return(
-            
+        return (
 
-        
-       
-                <div className="container">
-               
-                
-             <div className="d-flex flex-column align-items-center justify-content-center text-center ">
-        
-                   
-             <h5 className={classes.glitchTitle}>
-                
-                     Languages
-                
-             </h5>   
-             <div className="row mt-3">
-                <div className="col">
-                        <img src={javascriptLogo} 
-                        className={classes.imgLogo}
-                        
-                         />
-                </div>
-               
-                <div className="col">
-                        <img src={pythonLogo} width="70" />
-                </div>
-              
-                </div>
-                <div className="row mt-1">
+                <div className="container mt-4">
 
-                <div className="col">
-                <img src={javaLogo} width="90" />
-  
-  
-                </div>
-                <div className="col">
-                        <img src={phpLogo} width="80" className="mt-3" />
-                </div>
-               
+                        <div className="d-flex flex-column align-items-center justify-content-center text-center ">
 
-        </div>
-  
+                                <div className={`card card-body w-100 mt-3 ${classes.frameworkCard}`}>
+                                        <h5 className={` ${classes.languageTitle}`}>Languages</h5>
+                                        
+                                        <div className="row mt-3">
+                                                <div className="col">
+                                                        <img src={javascriptLogo}
+                                                                width="70"
+                                                                className={classes.imgLogo}
+                                                                />
+                                                </div>
 
-        <h5 className={classes.glitchTitle}>
-         Frontend Frameworks
-        </h5>
-        <div className="row">
-                <div className="col">
-                        <img src={reactLogo} width="90" />
-                        <img src={angularLogo} width="90" />
-                </div>
+                                                <div className="col">
+                                                        <img src={pythonLogo} width="70" className={classes.imgLogo} />
+                                                </div>
+                                        </div>
+                                        <div className="row mt-1">
+                                                <div className="col">
+                                                        <img src={javaLogo} width="90"  className={classes.imgLogo}/>
+                                                </div>
+                                                <div className="col">
+                                                        <img src={phpLogo} width="80" className={`mt-3 ${classes.imgLogo}` } />
+                                                </div>
+                                        </div>
 
-        </div>
-        <h5 className={classes.glitchTitle}>
-         Backend Frameworks
-        </h5>
-        <div className="row">
-                <div className="col">
-                
-                        <img src={djangoLogo} width="100" />
+                                </div>
+
+                                <div className={`card card-body w-100 mt-3 ${classes.frameworkCard}`}>
+                                        <h5 className={classes.languageTitle}>
+                                                Frontend
+                                        </h5>
+                                        <div className="row">
+                                                <div className="col">
+                                                        <img src={reactLogo} width="95" className={classes.imgLogo} />
+                                                        <img src={angularLogo} width="82" className={classes.imgLogo} />
+
+                                                </div>
+                                                <div className="row">
+                                                <div className="col">
+                                                        <img src={vueLogo} width="70" className={classes.imgLogo} />
+                                                </div>
+                                        </div>
+                                        </div>
+                                </div>
+                                <div className={`card card-body w-100 mt-3 ${classes.frameworkCard}`}>
+                                        <h5 className={classes.languageTitle}>
+                                                Backend
+                                        </h5>
+                                        <div className="row">
+                                                <div className="col">
+
+                                                        <img src={djangoLogo} width="100" className={classes.imgLogo}/>
+                                                </div>
+                                                <div className="col">
+                                                        <img src={nodeLogo} width="100" className={classes.imgLogo} />
+                                                </div>
+                                        </div>
+                                        <div className="row">
+                                                <div className="col">
+                                                        <img src={laravelLogo} width="110"  className={classes.imgLogo} />
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div className={`card card-body  w-100 mt-3 ${classes.frameworkCard}`}>
+                                        <h5 className={classes.languageTitle}>
+                                                Databases
+                                        </h5>
+                                        <div className="row">
+                                                <div className="col">
+                                                        <img src={postgresqlLogo} width="70" className={classes.imgLogo} />
+                                                </div>
+                                                <div className="col">
+                                                        <img src={mysqlLogo} width="90"  className={classes.imgLogo}/>
+                                                </div>
+                                        </div>
+                                        <div className="row">
+                                                <div className="col">
+                                                        <img src={mongodbLogo} className={classes.imgLogo} width="70" />
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div className={`card card-body  w-100 mt-3 ${classes.frameworkCard}`}>
+                                <h5 className={classes.languageTitle}>
+                                                Mobile
+                                        </h5>
+                                        <div className="row">
+                                                <div className="col">
+                                                        <img src={nativeLogo} width="150" className="m-3" className={classes.imgLogo} />
+                                                </div>
+                                        </div>
+                                </div>
+
                         </div>
-                        <div className="col">
-                        <img src={nodeLogo} width="100" />
-                        </div>
-                        
-
-        </div>
-        <div className="row">
-        <div className="col">
-                        <img src={laravelLogo} width="110" />
-                        </div>
-        </div>
-        
-       
-        <h5 className={classes.glitchTitle}>
-         Databases
-        </h5>
-        <div className="row">
-                <div className="col">
-                        <img src={postgresqlLogo} width="70" />
-                        </div>
-                <div className="col">
-                        <img src={mysqlLogo} width="90" />
-                        </div>
                 </div>
-                <div className="row">
-                <div className="col">
-                        <img src={mongodbLogo} width="70" />
-                        </div>
-                </div>
-
-        
-
-       
-
-
-            
-             </div>
-        </div> 
-    )
+        )
 }
 
 

@@ -3,56 +3,47 @@ import { makeStyles } from '@material-ui/core'
 import { IconButton } from '@material-ui/core'
 import {useMediaQuery} from 'react-responsive'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
+import profileImg from '../../static/images/foto.jpeg'
+import { BorderRight } from '@material-ui/icons';
 const useStyles  = makeStyles(theme =>({
-       
+        bioContainer:{
+                border: '1px dashed #959595 ',
+                borderBottom: ' 5px solid #009688',
+/*                background:  'linear-gradient(bottom, #DFF1EE, #009688)',*/
+              /*  background:  'linear-gradient(bottom, #e0f2f1, #fff)', */
+                
+                color: '000',
 
+                boxShadow: '1px 1px 3px grey'
 
-        imgContainerMobile:{
-                width: '150px',
-                backgroundColor: '#000',
+                        
+
         },
-        photoBioMobile:{
+               
+        imgContainer:{
+                width: '150px',
+                marginBottom: '20px',
+        
+                
+        },
+        photoBio:{
                 width: '100%',
                 borderRadius: '50%',
-                boxShadow: '0 0 0.5em salmon'
+                border: '2px solid  #009688',
+                
+
+                
+                
         },
-        bioTextMobile:{
+        bioText:{
                 /*fontFamily: '"Source Code Pro" , monospace', */
-                fontFamily: '"Ubuntu Mono", monospace',
-                textAlign: 'center',
-                marginTop: '20px',
+                fontFamily: '"Varela", sans-serif',
+                textAlign: 'justify',
+                padding: ' 0 10px',
+                marginTop: '5px',
                 fontSize: '1.1em'
 },
-imgContainerTablet:{
-        width: '250px',
-        backgroundColor: '#000',
-       
-},
-photoBioTablet:{
-        width: '100%',
-        borderRadius: '50%'
-},
-bioTextTablet:{
-        fontFamily: '"Source Code Pro" , monospace',
-        textAlign: 'center',
-        marginTop: '20px',
-        fontSize: '34px',
-},
-imgContainerLaptop:{
-        width: '650px',
-        backgroundColor: '#000',
-},
-photoBioLaptop:{
-        width: '100%',
-        borderRadius: '10%'
-},
-bioTextLaptop:{
-        fontFamily: '"Source Code Pro" , monospace',
-        textAlign: 'center',
-        marginTop: '20px',
-        fontSize: '100px',
-},
+
 
 }))
 function Bio(props){
@@ -69,27 +60,22 @@ const classes = useStyles()
             
         <React.Fragment>
         
-        
-        <React.Fragment>
-        <div className={ screen == "isMobile" ? imgContainerMobile: 
-                         screen == "isTablet" ? imgContainerTablet: null  } >
-                <img className={screen == "isMobile" ? photoBioMobile:
-                                screen == "isTablet" ? photoBioTablet: null }  
-                     src="https://scontent.fgua9-1.fna.fbcdn.net/v/t1.6435-9/82942322_103057337907296_1140940809298771968_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=5382yvZD5V0AX_8iG0M&_nc_ht=scontent.fgua9-1.fna&oh=f55a54f6538f94ef897231bfac0395db&oe=60EBEF51" 
+        <div className={classes.imgContainer } >
+                <img className={classes.photoBio }  
+                     src={profileImg} 
                 />
         </div>
-        <p className={ screen == "isMobile" ? bioTextMobile: 
-                       screen == "isTablet" ? bioTextTablet: null 
-                     }>
+        <div className={`card card-body ${classes.bioContainer}`}>
+
+        <p className={classes.bioText}>
         I'm a software developer from Guatemala and everything I've learned about web development has been on my own by online courses and a scholarship by Platzi and Facebook Developer Circles in 2019.
 
         </p>
-        <p className={ screen == "isMobile" ? bioTextMobile: 
-                       screen == "isTablet" ? bioTextTablet: null}>
+        <p className={classes.bioText}>
         At this moment I'm studing software development at Galileo University. I've been working with different technologies such as:
         </p>
-       
-        </React.Fragment>
+        </div>
+        
         
 
 

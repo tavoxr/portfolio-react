@@ -7,7 +7,8 @@ const drawerWidth = 250
 
 const useStyles = makeStyles((theme)=>({
     logo:{
-        flexGrow: 1
+        flexGrow: 1,
+        color: "#000"
     },
     appBar:{
         [theme.breakpoints.up('xl')]:{
@@ -38,7 +39,7 @@ const classes = useStyles()
             <Typography variant="h5" className={classes.logo} >
               GH
             </Typography>
-            <IconButton aria-label="" color="inherit" onClick={()=> props.handleDrawerToggle()} >
+            <IconButton aria-label="" color="primary" onClick={()=> props.handleDrawerToggle()} >
               <MenuIcon />
             </IconButton>
           </Toolbar>

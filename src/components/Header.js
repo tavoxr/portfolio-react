@@ -7,7 +7,7 @@ import Hero from './Hero'
 
 const useStyles = makeStyles(theme=>({
     root:{
-        backgroundColor:  '#000',
+        backgroundColor:  '#fff',
         minHeight: '100vh',
     
       },

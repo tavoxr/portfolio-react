@@ -1,11 +1,14 @@
 #cardForm{
-    background-color: #1E1F1F ;
-    color: #fff;
+    background-color: '#F9F6F4';
+    
+    border: '1px solid #000';
+    
+    
     
 }
 
 label{
-    font-family: "Source Code Pro" , monospace;
-    text-shadow: 0 0 0.35em #1ABC9C;
+    font-family: "Varela" , 'sans-serif';
+    color: '#000';
     
 }

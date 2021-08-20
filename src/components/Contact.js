@@ -10,81 +10,42 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 const useStyles = makeStyles(theme=>({
     root:{
         minHeight: '100vh',
-        backgroundColor: '#000',
-        color: '#fff',
+        backgroundColor: 'transparent',
+        color: '#000',
         fontFamily: '"Source Code Pro" , monospace',
     },
     toolbar: theme.mixins.toolbar,
     glitchTitle:{
         textTransform: 'uppercase',
-        fontFamily: '"Source Code Pro" , monospace',
-        textShadow: '0.05em 0 0 rgba(26, 188, 156, 0.75), -0.025em -0.05em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75 )',
-        animation: "$glitch 750ms infinite",
-        position: 'relative',
+        fontFamily: '"Varela" , sans-serif',
         fontSize: '2rem',
+        fontWeight:'normal',
         marginBottom: '30px',
-        "& span":{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            fontFamily: '"Source Code Pro" , monospace',
-        },
-        "& span:first-child":{
-            animation: '$glitch 650ms infinite',
-            
-            zIndex: 1,
-            clipPath: 'polygon(0 0, 100% 0, 100% 45%, 0 45%)',
-            transform: 'translate(-0.025em, -0.0125em)',
-            opacity:0.8
-        },
-        "& span:last-child":{
-            animation: "$glitch 375ms infinite",
-            zIndex: 1 ,
-            
-            clipPath: 'polygon(0 80%, 100% 20%, 100% 100%, 0 100%)',
-            transform: 'translate(0.03em, 0.025em)',
-            opacity: 0.8
-        }
-    },
     
-    
-    "@keyframes glitch":{
-        "0%":{
-            textShadow: '0.05em 0 0 rgba(26, 188, 156, 0.75), -0.025em -0.05em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75 )'
-        },
-        "14%":{
-            textShadow: '0.05em 0 0 rgba(26, 188, 156, 0.75), -0.025em -0.05em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75 )'
-        },
-        "15%":{
-            textShadow: '-0.05em -0.025em 0 rgba(26, 188, 156, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75 )'
-        },
-        "49%":{
-            textShadow: '-0.05em -0.025em 0 rgba(26, 188, 156, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75 )'
-        },
-        "50%":{
-            textShadow: '0.025em 0.05em 0 rgba(26, 188, 156, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75 )'
-        },
-        "99%":{
-            textShadow: '0.025em 0.05em 0 rgba(26, 188, 156, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75 )'
-        },
-        "100%":{
-            textShadow: '-0.025em 0 0 rgba(26, 188, 156, 0.75), -0.025em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em -0.05em 0 rgba(0, 0, 255, 0.75 )'
-        }
     },
     formCard:{
-        backgroundColor: '#1E1F1F'
+        backgroundColor: '#1E1F1F',
+    },
+    iconsContainer:{
+        
     },
     socialIcons:{
-        color: '#fff',
+        color: '#009688',
         textShadow: '0 0 0.35em #1ABC9C',
         fontSize: '50px',
     },
     subtitles:{
         textAlign: 'center',
-        color: '#fff',
-        textShadow: '0 0 0.35em #1ABC9C',
-        fontFamily: '"Source Code Pro" , monospace',
+        color: '#000',
+        fontWeight: 'bolder',
+        
         marginBottom: '20px'
+    },
+    submit:{
+        backgroundColor:'#26a69a',
+        color: '#fff',
+        fontSize: '18px'
+
     }
     
 
@@ -115,8 +76,9 @@ function Contact(){
                 <div className={classes.toolbar}></div>
                 <div className="container">
                 <div className="d-flex flex-column justify-content-center align-items-center">
-                <h1 className={classes.glitchTitle}><span>Contact</span>Contact<span>Contact</span></h1>
+                <h1 className={classes.glitchTitle}>Contact</h1>
                 
+                <div className={`d-flex flex-column justify-content-center align-items-center ${classes.iconsContainer}`}>
                 <h3 className={classes.subtitles}>My social networks</h3>
 
                    
@@ -132,9 +94,9 @@ function Contact(){
                         <FacebookIcon className={classes.socialIcons}/>
                     </IconButton>
                     
-                    
+                 </div>
                     <div className="card card-body col-12 mt-4" id="cardForm">
-                    <h3 className={classes.subtitles}>Send me a message</h3>
+                    <h3 className={classes.subtitles}>Are are interested in my job?<br/><br/>  Send me an email</h3>
                     <form className={classes.form} onSubmit={sendEmail}>
                         <div className="mb-3">
                         <label className="form-label" for="name"  >Name:</label>
@@ -152,7 +114,7 @@ function Contact(){
 
                         </div>
                         <div className="mb-3">
-                        <button type="submit" className="form-control btn btn-success" id="submit" name="submitBtn">Send</button>
+                        <button type="submit" className={`form-control btn ${classes.submit} `} id="submit" name="submitBtn">Send</button>
 
                         </div>
                     </form>

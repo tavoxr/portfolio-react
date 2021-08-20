@@ -27,9 +27,11 @@ const useStyles = makeStyles(theme=>({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        color: 'white',
-        backgroundColor: '#000',
-        textShadow: '0 0 0.35em #1ABC9C'
+        color: '#000',
+       /* backgroundColor: '#F9F6F4',*/
+      /* backgroundColor: '#FCFBF9'*/
+      backgroundColor: 'transparent'
+        
        
     },
     downBtn:{
@@ -43,6 +45,10 @@ const useStyles = makeStyles(theme=>({
       fontSize: '50px' ,
      
     },
+    greetingColor:{
+     /* color: '#00bfa5', */
+      color: '#009688'
+    }
   
     
    
@@ -63,9 +69,9 @@ return(
           <div className="container d-flex flex-column justify-content-center align-items-center text-center">
             {isMobile && 
             <React.Fragment>
-              <h1 id="greeting">Hello,</h1>
+              <h1 id="greeting"><span className={classes.greetingColor} >Hello</span>,</h1>
             <h1 id="titleMovil"  >My name is</h1>
-            <h1 id="titleMovil2"  >Gustavo Herrera </h1>
+            <h1 id="titleMovil2"  >Gustavo <span className={classes.greetingColor} >Herrera</span> </h1>
             <p className="subtitleMovil" >Welcome to my website!</p>
             </React.Fragment>
             
@@ -76,7 +82,7 @@ return(
           <p className="subtitle" >Welcome to my website!</p>
           </React.Fragment>
         }
-        <IconButton aria-label="" id={isMobile? 'downBtnMovil' : 'downBtn'} size="medium" className={classes.downBtn} color="primary" href="#about">
+        <IconButton aria-label="" id={isMobile? 'downBtnMovil' : 'downBtn'} size="medium" className={classes.downBtn} color="primary" href="#job">
           <ExpandMoreIcon className={classes.downBtn} />
         </IconButton>
           </div>

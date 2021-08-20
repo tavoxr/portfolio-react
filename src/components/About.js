@@ -7,11 +7,11 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { IconButton } from '@material-ui/core'
 const useStyles = makeStyles(theme=>({
     root:{
-        backgroundColor:'#000',
+        backgroundColor:'transparent',
         minHeight: '100vh',
-        color: "#fff",
-        fontFamily: '"Source Code Pro" , monospace',
-        textShadow: '0 0 0.35em #1ABC9C'
+        color: "#000",
+        fontFamily: '"Varela" , sans-serif',
+        
     },
     toolbar: theme.mixins.toolbar,
     downBtn:{

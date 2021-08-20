@@ -28,15 +28,11 @@ function NavbarContainer(){
             
             />
 
-            <Hidden lgDown>
-                <NavigationDrawer
-                    variant="permanent"
-                    open={true}
-                   
-                />
-            </Hidden>
+            
 
-            <Hidden xlUp>
+            
+           
+            <Hidden only={['xl']}>
                 <NavigationDrawer
                     variant="temporary"
                     open={abrir}

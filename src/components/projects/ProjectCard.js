@@ -14,29 +14,37 @@ const useStyles = makeStyles(theme=> ({
     root: {
       maxWidth: 545,
       marginTop:'15px',
-      backgroundColor: '#1E1F1F',
+      backgroundColor: '#212121',
+      color:'#fff'
     },
-   
-
-
-
-
-
-
-
-
-
 
     media: {
       height: 240,
-      clipPath: 'polygon(0 0, 100% 0, 100% 85%,0 100%)',
+      clipPath: 'polygon(0 0, 100% 0, 100% 87%,0 100%)',
       borderBottomLeftRadius: '5px'
     },
     textCard:{
-      fontFamily: '"Source Code Pro" , monospace',
+      fontFamily: '"Varela" , sans-serif',
       color: '#fff',
-      textShadow: '0 0 0.35em #1ABC9C'
+      background: '#212121',
+    
+    },
+    projectTitle:{
+      color: '#009688'
+    },
+    projectTech:{
+      fontSize: '16px'
+    },
+    dash:{
+      color: '#009688'
+
+    },
+    btnIcon:{
+      backgroundColor: '#006064',
+      color:'#fff',
+      
     }
+
   }));
   
 function ProjectCard(){
@@ -65,22 +73,45 @@ function ProjectCard(){
         />
         <CardContent>
           <Typography  variant="h5" component="h5" className={classes.textCard}>
-            Lizard
+            <span className={classes.projectTitle}>Lizard</span>
+          </Typography>
+          <Typography  variant="p" component="p" className={classes.projectTech}>
+            Django<span className={classes.dash} >-</span>
+            Postgresql<span className={classes.dash} >-</span>
+
           </Typography>
           
         </CardContent>
-      </CardActionArea>
-      <CardActions>
         
-
-       
-        <IconButton aria-label="" size="small" >
+      </CardActionArea>
+      
+      <CardActions className="d-flex justify-content-between mt-3">
+      <Button
+        variant="contained"
+        size="small"
+        className={classes.btnIcon}
+        endIcon={<GitHubIcon   />}
+        >
+          Github
+        </Button>
+     
+        <Button
+        variant="contained"
+        size="small"
+        className={classes.btnIcon}
+        endIcon={<VisibilityIcon />}
+        >
+          project
+        </Button>
+       {/*
+        <IconButton aria-label="" size="small">
           <Typography className={classes.textCard}>Github <GitHubIcon   /></Typography>  
         </IconButton>
 
         <IconButton aria-label="" size="small" >
           <Typography className={classes.textCard}>Watch <VisibilityIcon /></Typography> 
         </IconButton>
+       */}
         
       </CardActions>
     </Card>

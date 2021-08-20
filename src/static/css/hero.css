@@ -1,23 +1,20 @@
 :root{
-    --bg-color: #000;
+    --bg-color: #fff;
     --typewriterSpeed: 5s;
     --typewriterSpeedMovilFast:1.8s;
-    --typewriterSpeedMovilSlow:2.7s;
+    --typewriterSpeedMovilSlow:1.2s;
     --typewriterSpeedFast: 1.2s;
     --typewriterInitialDelay:1s;
-    --typewriterGreetingCharacters: 6;
     --typewriterTitleCharacters: 34;
-    --typewriterMovilTitleCharacters: 10;
-    --typewriterMovilTitle2Characters: 15;
     --fadeInUpTextDelay: calc(var(--typewriterSpeed) + var(--typewriterInitialDelay));
-    --fadeInUpMovilTextDelay: calc( var(--typewriterSpeedMovilFast) + var(--typewriterSpeedMovilSlow) + var(--typewriterSpeedFast) + var(--typewriterInitialDelay) + 0.5s);
+    --fadeInUpMovilTextDelay: calc( var(--typewriterSpeedMovilFast) + var(--typewriterSpeedMovilSlow) + var(--typewriterSpeedFast));
 
 } 
 h1{
-    font-family:  "Source Code Pro", monospace;
+    font-family: 'Varela', sans-serif;
     position: relative;
-    
-    font-size: 28px;
+    font-weight: bolder;
+    font-size: 40px;
     
 }
 
@@ -35,15 +32,15 @@ h1::after{
 
 #greeting::before{
     background-color: var(--bg-color);
-    animation: typewriter var(--typewriterSpeedFast) steps(var(--typewriterGreetingCharacters)) var(--typewriterInitialDelay) forwards;
+    animation: typewriter var(--typewriterSpeedFast)  forwards;
 }
 
 #greeting::after{
     width: .125em;
     background-color: #000;
     animation: 
-        typewriter var(--typewriterSpeedFast) steps(var(--typewriterGreetingCharacters)) var(--typewriterInitialDelay) forwards,
-        blink 800ms steps(var(--typewriterGreetingCharacters)) 3 alternate;
+        typewriter var(--typewriterSpeedFast)  forwards,
+        blink 400ms  1 alternate;
 
 }
 
@@ -52,15 +49,15 @@ h1::after{
 
 #titleMovil::before{
     background-color: var(--bg-color);
-    animation: typewriter var(--typewriterSpeedMovilFast) steps(var(--typewriterMovilTitleCharacters)) calc(var(--typewriterSpeedFast) + var(--typewriterInitialDelay)) forwards;
+    animation: typewriter var(--typewriterSpeedMovilFast)  var(--typewriterSpeedFast) forwards;
 }
 
 #titleMovil::after{
     width: .125em;
-    background-color: #000;
+    background-color: #fff;
     animation: 
-        typewriter var(--typewriterSpeedMovilFast) steps(var(--typewriterMovilTitleCharacters)) calc(var(--typewriterSpeedFast) + var(--typewriterInitialDelay)) forwards,
-        blink 400ms steps(var(--typewriterMovilTitleCharacters))  calc(var(--typewriterInitialDelay) + var(--typewriterSpeedFast))  5 alternate;
+        typewriter var(--typewriterSpeedMovilFast)  var(--typewriterSpeedFast)  forwards,
+        blink 400ms   calc(var(--typewriterInitialDelay) + var(--typewriterSpeedFast))  1 alternate;
 
 }
 
@@ -68,15 +65,15 @@ h1::after{
 
 #titleMovil2::before{
     background-color: var(--bg-color);
-    animation: typewriter var(--typewriterSpeedMovilSlow) steps(var(--typewriterMovilTitle2Characters)) calc(var(--typewriterSpeedFast) + var(--typewriterSpeedMovilFast) + var(--typewriterInitialDelay)) forwards;
+    animation: typewriter var(--typewriterSpeedMovilSlow)  calc(var(--typewriterSpeedFast) + var(--typewriterSpeedMovilFast)) forwards;
 }
 
 #titleMovil2::after{
     width: .125em;
-    background-color: #000;
+    background-color: #fff;
     animation: 
-        typewriter var(--typewriterSpeedMovilSlow) steps(var(--typewriterMovilTitle2Characters)) calc(var(--typewriterSpeedFast) + var(--typewriterSpeedMovilFast) + var(--typewriterInitialDelay)) forwards,
-        blink 700ms steps(var(--typewriterMovilTitle2Characters))  calc( var(--typewriterInitialDelay) + var(--typewriterSpeedFast)  + var(--typewriterSpeedMovilFast) )  infinite;
+        typewriter var(--typewriterSpeedMovilSlow)  calc(var(--typewriterSpeedFast) + var(--typewriterSpeedMovilFast)) forwards,
+        blink 900ms   calc( var(--typewriterInitialDelay) + var(--typewriterSpeedFast)  + var(--typewriterSpeedMovilFast) )  infinite;
 
 }
 
@@ -128,7 +125,6 @@ h1::after{
 
 
 
-
 @keyframes typewriter {
     to{
         left:100%;
@@ -156,7 +152,7 @@ h1::after{
     margin-top: 10px;
     transform: translateY(3rem);
     opacity: 0;
-    text-shadow: 0.5em 0.25em 0.5em salmon;
+
     animation: fadeInUp 2s ease var(--fadeInUpMovilTextDelay) forwards; 
     
 }
