@@ -6,6 +6,7 @@ import swal from 'sweetalert'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import NavbarContainer from './NavbarContainer'
 
 const useStyles = makeStyles(theme=>({
     root:{
@@ -73,6 +74,8 @@ function Contact(){
     return(
         <React.Fragment>
             <div className={classes.root} id="contact">
+             <NavbarContainer/>
+
                 <div className={classes.toolbar}></div>
                 <div className="container">
                 <div className="d-flex flex-column justify-content-center align-items-center">

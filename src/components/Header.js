@@ -3,6 +3,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core'
 import NavbarContainer from './NavbarContainer'
 import Hero from './Hero'
+import Job from './About/Job'
 
 
 const useStyles = makeStyles(theme=>({
@@ -29,6 +30,7 @@ const classes = useStyles()
             <div className={classes.toolbar} ></div>
             
            <Hero/>
+           <Job/>
           
         </div>
             

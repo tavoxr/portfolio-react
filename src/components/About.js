@@ -5,6 +5,9 @@ import {useMediaQuery} from 'react-responsive'
 import Languages from './About/Languages'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { IconButton } from '@material-ui/core'
+import NavbarContainer from './NavbarContainer'
+
+
 const useStyles = makeStyles(theme=>({
     root:{
         backgroundColor:'transparent',
@@ -37,6 +40,8 @@ function About(){
     return(
         <React.Fragment>
             <div className={classes.root} id="about">
+             <NavbarContainer/>
+
                 <div className="container">
                     <div className={classes.toolbar} ></div>
                     { isMobile && 

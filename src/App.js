@@ -7,7 +7,13 @@ import About from './components/About'
 import Job from './components/About/Job'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import { BrowserRouter as Router,
+          Switch,
+          Route,
+          Link,
+          BrowserRouter
 
+} from 'react-router-dom'
 const useStyles = makeStyles(theme =>({
  
 
@@ -19,15 +25,29 @@ function App() {
   return (
     
     <ThemeProvider theme={theme}  >
-      <div className="container">
+    
+<BrowserRouter>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+              <Header/>
 
-      
-          <Header/>
-          <Job/>
-         { /*<About/>*/ }
+          </Route>
+          <Route exact path="/about">
+            <About/> 
+          
+          </Route>
+         <Route exact path="/projects">
           <Projects/>
+          </Route>
+          <Route exact path="/contact">
           <Contact/>
-          </div>
+          </Route>
+        </Switch>
+
+      </Router>
+    </BrowserRouter>
+        
           
 
     </ThemeProvider>

@@ -2,13 +2,14 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core'
 import ProjectCard from './projects/ProjectCard'
 import '../static/css/projects.css'
+import NavbarContainer from './NavbarContainer'
 
 const useStyles = makeStyles(theme=>({
     root:{
         minHeight: '100vh',
         
         color: '#fff',
-        fontFamily: '"Source Code Pro" , monospace',
+    
 
     },
     toolbar: theme.mixins.toolbar,
@@ -26,6 +27,7 @@ function Projects(){
 
     return(
         <div className={classes.root} id="projects">
+             <NavbarContainer/>
             <div className={classes.toolbar}></div>
             <div className="container">
                 <div className="d-flex flex-column justify-content-center align-items-center text-center">

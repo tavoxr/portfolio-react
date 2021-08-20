@@ -1,5 +1,5 @@
 import React from 'react'
-import { Drawer, Divider, List,ListItem, ListItemIcon, ListItemText, IconButton } from '@material-ui/core'
+import { Drawer, Divider, List,ListItem, ListItemIcon, ListItemText, IconButton, Link } from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
 import theme from '../themeConfig'
 import HomeIcon from '@material-ui/icons/Home';
@@ -7,7 +7,7 @@ import ContactMailIcon from '@material-ui/icons/ContactMail';
 import CodeIcon from '@material-ui/icons/Code';
 import FaceIcon from '@material-ui/icons/Face';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
-
+import { useHistory } from 'react-router-dom';
 
 const drawerWidth = 250
 
@@ -40,6 +40,9 @@ const useStyles = makeStyles(theme=>({
 function NavigationDrawer(props){
 
     const classes = useStyles()
+    const history = useHistory();
+
+
 
     return(
         <Drawer
@@ -60,33 +63,34 @@ function NavigationDrawer(props){
              
          </div>
          <Divider/>
-         <List component="nav">
-            <ListItem button>
+            
+         <List >
+            <ListItem button onClick={()=> history.push("/")} >
                 <ListItemIcon >
                     <HomeIcon/>
                 </ListItemIcon>
                 <ListItemText primary="<Home/>" />
             </ListItem>
-            <ListItem button>
+            <ListItem button onClick={()=> history.push("/about")}>
                 <ListItemIcon >
                     <FaceIcon/>
                 </ListItemIcon>
                 <ListItemText primary="<About/>" />
             </ListItem>
-            <ListItem button>
+            <ListItem button onClick={()=> history.push("/projects")}>
                 <ListItemIcon >
                     <CodeIcon/>
                 </ListItemIcon>
                 <ListItemText primary="<Projects/>" />
             </ListItem>
-            <ListItem button>
+            <ListItem button onClick={()=> history.push("/contact")}>
                 <ListItemIcon >
                     <ContactMailIcon/>
                 </ListItemIcon>
                 <ListItemText primary="<Contact/>" />
             </ListItem>
          </List>
-         
+        
 
 
       </Drawer>
