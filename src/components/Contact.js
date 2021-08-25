@@ -7,6 +7,8 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import NavbarContainer from './NavbarContainer'
+import useScrollToTop from '../hook/scrollTop'
+
 
 const useStyles = makeStyles(theme=>({
     root:{
@@ -55,6 +57,8 @@ const useStyles = makeStyles(theme=>({
 
 function Contact(){
     const classes = useStyles()
+    useScrollToTop()
+    
     function sendEmail(e) {
         e.preventDefault();
     
@@ -102,17 +106,17 @@ function Contact(){
                     <h3 className={classes.subtitles}>Are are interested in my job?<br/><br/>  Send me an email</h3>
                     <form className={classes.form} onSubmit={sendEmail}>
                         <div className="mb-3">
-                        <label className="form-label" for="name"  >Name:</label>
+                        <label className="form-label" htmlFor="name"  >Name:</label>
                         <input type="text" className="form-control" id="name" name="name" required />
 
                         </div>
                         <div className="mb-3">
-                        <label className="form-label" for="email"  >Email:</label>
+                        <label className="form-label" htmlFor="email"  >Email:</label>
                         <input type="email" className="form-control" id="email" name="email" required />
 
                         </div>
                         <div className="mb-3">
-                        <label className="form-label" for="message"  >Message:</label>
+                        <label className="form-label" htmlFor="message"  >Message:</label>
                         <textarea type="" className="form-control" id="message" name="message" rows="7" />
 
                         </div>

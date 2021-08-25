@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme=> ({
 
   }));
   
-function ProjectCard(){
+function ProjectCard(props){
     const classes = useStyles()
 
     return(
@@ -68,16 +68,18 @@ function ProjectCard(){
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+          image={props.imageUrl}
           title="Contemplative Reptile"
         />
         <CardContent>
           <Typography  variant="h5" component="h5" className={classes.textCard}>
-            <span className={classes.projectTitle}>Lizard</span>
+            <span className={classes.projectTitle}>{props.title}</span>
           </Typography>
-          <Typography  variant="p" component="p" className={classes.projectTech}>
-            Django<span className={classes.dash} >-</span>
-            Postgresql<span className={classes.dash} >-</span>
+          <Typography  variant="body1" component="p" className={classes.projectTech}>
+            { props.technologies.map((tech)=>{
+              return  ` ${tech} `   
+            })}
+            
 
           </Typography>
           

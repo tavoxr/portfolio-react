@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core'
 import ProjectCard from './projects/ProjectCard'
 import '../static/css/projects.css'
 import NavbarContainer from './NavbarContainer'
-
+import useScrollToTop from '../hook/scrollTop'
 const useStyles = makeStyles(theme=>({
     root:{
         minHeight: '100vh',
@@ -22,9 +22,11 @@ const useStyles = makeStyles(theme=>({
 
     },
 }))
+
 function Projects(){
     const classes = useStyles()
 
+    useScrollToTop()
     return(
         <div className={classes.root} id="projects">
              <NavbarContainer/>
@@ -32,12 +34,9 @@ function Projects(){
             <div className="container">
                 <div className="d-flex flex-column justify-content-center align-items-center text-center">
                 <h2 className={classes.title}  >Projects</h2>
-                <ProjectCard/>
-                <ProjectCard/>
-                <ProjectCard/>
-                <ProjectCard/>
-                <ProjectCard/>
-                <ProjectCard/>
+                
+                <ProjectCard title="Lizard" technologies={["django","postgres","ddd", "ffdsfsdf"]} imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"/>
+              
                 </div>
              
 

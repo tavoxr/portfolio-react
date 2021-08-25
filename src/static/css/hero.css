@@ -14,7 +14,7 @@ h1{
     font-family: 'Varela', sans-serif;
     position: relative;
     font-weight: bolder;
-    font-size: 40px;
+    
     
 }
 
@@ -37,7 +37,7 @@ h1::after{
 
 #greeting::after{
     width: .125em;
-    background-color: #000;
+    background-color: #fff;
     animation: 
         typewriter var(--typewriterSpeedFast)  forwards,
         blink 400ms  1 alternate;
@@ -139,7 +139,6 @@ h1::after{
 }
 .subtitle{
     font-family:  "Source Code Pro", monospace;
-    font-size: 25px;
     margin-top: 10px;
     transform: translateY(3rem);
     opacity: 0;

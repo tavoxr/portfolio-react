@@ -6,7 +6,7 @@ import Languages from './About/Languages'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { IconButton } from '@material-ui/core'
 import NavbarContainer from './NavbarContainer'
-
+import useScrollToTop from '../hook/scrollTop'
 
 const useStyles = makeStyles(theme=>({
     root:{
@@ -34,7 +34,7 @@ function About(){
     const isTablet = useMediaQuery({query: '(min-device-width: 481px)'})
     const isMobile = useMediaQuery({query: '(max-width:480px)'})
     
-   
+    useScrollToTop()
 
 
     return(

@@ -3,6 +3,15 @@ import teal from '@material-ui/core/colors/teal'
 
 
 const theme = createMuiTheme({
+    breakpoints: {
+        values: {
+          xs: 0,
+          sm: 600,
+          md: 601,
+          lg: 901,
+          xl: 1920,
+        },
+      },
     palette:{
         primary:{
             light: teal[50],
@@ -13,7 +22,8 @@ const theme = createMuiTheme({
     text:{
         secondary: '#000'
     }
-    }
+    },
+
 })
 
 
