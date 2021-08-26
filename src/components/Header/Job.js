@@ -1,9 +1,7 @@
 import React from 'react';
-import { Link, makeStyles } from '@material-ui/core';
+import { Link, makeStyles, Button } from '@material-ui/core';
 import profileImg from '../../static/images/foto.jpeg'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { useHistory } from 'react-router-dom';
-import { IconButton, Button } from '@material-ui/core'
 import theme from '../../themeConfig';
 import { useMediaQuery } from 'react-responsive'
 import { mobile, tablet, desktop } from '../../breakpoints';
@@ -191,10 +189,6 @@ const Job = (props) => {
                                 <Button variant="contained" color="secondary" onClick={() => history.push('/projects')}>Projects</Button>
 
                             </div>
-                            {/* <div className="col-1">
-                                    <p>fsfdfdfdsf</p>
-                                </div>
-                            */}
                         </div>
                     </div>
 

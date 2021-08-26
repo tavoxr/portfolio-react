@@ -1,88 +1,98 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core'
+import { makeStyles, Button } from '@material-ui/core'
 import Bio from './About/Bio'
-import {useMediaQuery} from 'react-responsive'
+import { useMediaQuery } from 'react-responsive'
 import Languages from './About/Languages'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { IconButton } from '@material-ui/core'
 import NavbarContainer from './NavbarContainer'
 import useScrollToTop from '../hook/scrollTop'
+import { mobile, tablet, desktop } from '../breakpoints';
+import { useHistory } from 'react-router-dom';
 
-const useStyles = makeStyles(theme=>({
-    root:{
-        backgroundColor:'transparent',
+const useStyles = makeStyles(theme => ({
+    root: {
+        backgroundColor: 'transparent',
         minHeight: '100vh',
         color: "#000",
         fontFamily: '"Varela" , sans-serif',
-        
+
     },
     toolbar: theme.mixins.toolbar,
-    downBtn:{
+    downBtn: {
         textDecoration: 'none',
         fontSize: '60px',
-        '&:hover':{
-          color:'white',
+        '&:hover': {
+            color: 'white',
         }
-      },
+    },
+    paragraph: {
+        textAlign: 'justify',
+
+        [mobile]: {
+            marginTop: '20px'
+
+        },
+        [tablet]: {
+            marginTop: '15px'
+
+        },
+        [desktop]: {
+            marginTop: '15px'
+
+        }
+
+    }
 
 }))
 
 
-function About(){
-    const classes =  useStyles()
-    const isLaptop = useMediaQuery({query: '(min-device-width:800px)'})
-    const isTablet = useMediaQuery({query: '(min-device-width: 481px)'})
-    const isMobile = useMediaQuery({query: '(max-width:480px)'})
-    
+function About() {
+    const classes = useStyles()
+
+    const isMobile = useMediaQuery({ query: '(max-width:900px)' })
+    // const isTablet = useMediaQuery({ query: '(min-device-width: 768px)' })
+    const isDesktop = useMediaQuery({ query: '(min-device-width: 901px)' })
+
+    const history = useHistory();
     useScrollToTop()
 
-
-    return(
+    return (
         <React.Fragment>
             <div className={classes.root} id="about">
-             <NavbarContainer/>
+                <NavbarContainer />
 
                 <div className="container">
                     <div className={classes.toolbar} ></div>
-                    { isMobile && 
-                     <div className="d-flex flex-column align-items-center justify-content-center  ">
-                                <Bio screen={"isMobile"} />
-                                <Languages/>
-                                <IconButton aria-label=""  size="medium" className={classes.downBtn} color="primary" href="#projects">
-                                    <ExpandMoreIcon className={classes.downBtn} />
-                                </IconButton>
+                    {/*====================================== MOBILE ======================================================= */}
+                    {isMobile &&
+                        <div className="d-flex flex-column align-items-center justify-content-center  ">
+                            <Bio screen={"isMobile"} />
+                            <Languages />
+                            <div className="container d-flex flex-column align-items-center justify-content-center">
+                               
+                                <Button className={`m-4`} variant="contained" color="secondary" onClick={() => history.push('/contact')}>Contact Me</Button>
                             </div>
-                          
-                       
-                    }
 
-                    {isTablet && 
-                     <div className="d-flex flex-column align-items-center justify-content-center  ">
-                     <Bio screen={"isTablet"} />
-                     <Languages/>
-                     <IconButton aria-label="" id={isMobile? 'downBtnMovil' : 'downBtn'} size="medium" className={classes.downBtn} color="primary" href="#about">
-                         <ExpandMoreIcon className={classes.downBtn} />
-                     </IconButton>
-                 </div>
- 
+                        </div>
                     }
+                    {/*====================================== END MOBILE ======================================================= */}
 
-                {isLaptop && 
-                     <div className="d-flex flex-column align-items-center justify-content-center  ">
-                     <Bio screen={"isLaptop"} />
-                     <Languages/>
-                     <IconButton aria-label="" id={isMobile? 'downBtnMovil' : 'downBtn'} size="medium" className={classes.downBtn} color="primary" href="#about">
-                         <ExpandMoreIcon className={classes.downBtn} />
-                     </IconButton>
-                 </div>
- 
+                    {/*====================================== DESKTOP ======================================================= */}
+                    {isDesktop &&
+                        <div className="d-flex flex-column align-items-center justify-content-center  ">
+                            <div className="row">
+                                <div className="col-12">
+                                    <Bio  />
+                                </div>
+                            </div>
+                            <Languages />
+                        </div>
                     }
-                
+                    {/*====================================== END DESKTOP ======================================================= */}
+
                 </div>
             </div>
 
         </React.Fragment>
-
     )
 }
 

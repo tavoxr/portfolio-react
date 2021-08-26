@@ -1,12 +1,11 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import theme from '../themeConfig'
+import theme from '../../themeConfig'
 import Typography from '@material-ui/core/Typography'
-import { Height, MicNone } from '@material-ui/icons'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import '../static/css/hero.css'
+import '../../static/css/hero.css'
 import { IconButton } from '@material-ui/core'
-import { mobile, tablet, desktop } from '../breakpoints'
+import { mobile, tablet, desktop } from '../../breakpoints'
 
 
 const useStyles = makeStyles(theme => ({

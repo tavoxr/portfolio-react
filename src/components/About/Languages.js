@@ -14,95 +14,90 @@ import mysqlLogo from '../../static/images/mysqlLogo.png'
 import mongodbLogo from '../../static/images/mongodb.png'
 import vueLogo from '../../static/images/vueLogo.png'
 import nativeLogo from '../../static/images/reactNativeLogo.png'
+import { useMediaQuery } from 'react-responsive'
+import { mobile, tablet, desktop } from '../../breakpoints';
+import electronLogo from '../../static/images/electronLogo.png'
+
 
 const useStyles = makeStyles(theme => ({
-        /* root:{
-             backgroundColor:'#000',
-             minHeight: '100vh',
-             color: "#fff",
-             fontFamily: '"Source Code Pro" , monospace',
-         },*/
-        //toolbar: theme.mixins.toolbar,
-        imgLogo: {
-                 
-        
-                
 
-        },
         languageTitle: {
                 fontSize: '24px',
-                fontWeight: 'bolder',
-                
-
         },
-
-        frameworkCard:{
+        frameworkCard: {
                 backgroundColor: '#F6F9FA',
                 boxShadow: '2px 2px 3px grey',
-                
+                [mobile]: {
+                        boxShadow: '1px 1px 4px grey',
+                },
+                [tablet]: {
+                        boxShadow: '1px 1px 4px grey',
+                },
+                [desktop]: {
+                        height: '170px'
+                }
         }
-
-
-
-
-
-
 }))
-
 
 
 function Languages() {
         const classes = useStyles()
 
+        const isMobile = useMediaQuery({ query: '(max-width:1000px)' })
+        // const isTablet = useMediaQuery({ query: '(min-device-width: 768px)' })
+        const isDesktop = useMediaQuery({ query: '(min-device-width: 1001px)' })
+
         return (
-
                 <div className="container mt-4">
-
-                        <div className="d-flex flex-column align-items-center justify-content-center text-center ">
-
+                        {isMobile && <div className="d-flex flex-column align-items-center justify-content-center text-center ">
+                                
+                                {/* -------------------------------------LANGUAGES-CARD--------------------------------- */}
                                 <div className={`card card-body w-100 mt-3 ${classes.frameworkCard}`}>
                                         <h5 className={` ${classes.languageTitle}`}>Languages</h5>
-                                        
                                         <div className="row mt-3">
                                                 <div className="col">
                                                         <img src={javascriptLogo}
-                                                                width="70"
+                                                                width="60"
                                                                 className={classes.imgLogo}
-                                                                />
+                                                        />
                                                 </div>
 
                                                 <div className="col">
-                                                        <img src={pythonLogo} width="70" className={classes.imgLogo} />
-                                                </div>
-                                        </div>
-                                        <div className="row mt-1">
-                                                <div className="col">
-                                                        <img src={javaLogo} width="90"  className={classes.imgLogo}/>
+                                                        <img src={pythonLogo} width="60" className={classes.imgLogo} />
                                                 </div>
                                                 <div className="col">
-                                                        <img src={phpLogo} width="80" className={`mt-3 ${classes.imgLogo}` } />
+                                                        <img src={javaLogo} width="80" className={classes.imgLogo} />
+                                                </div>
+                                                <div className="col">
+                                                        <img src={phpLogo} width="70" className={`mt-3 ${classes.imgLogo}`} />
                                                 </div>
                                         </div>
-
                                 </div>
-
+                                {/* ----------------------------------END-LANGUAGES-CARD--------------------------------- */}
+                
+                                {/* -------------------------------------FRONTEND-CARD--------------------------------- */}
                                 <div className={`card card-body w-100 mt-3 ${classes.frameworkCard}`}>
                                         <h5 className={classes.languageTitle}>
                                                 Frontend
                                         </h5>
                                         <div className="row">
                                                 <div className="col">
-                                                        <img src={reactLogo} width="95" className={classes.imgLogo} />
-                                                        <img src={angularLogo} width="82" className={classes.imgLogo} />
+                                                        <img src={reactLogo} width="85" className={` mt-3 ${classes.imgLogo}`} />
 
                                                 </div>
-                                                <div className="row">
                                                 <div className="col">
-                                                        <img src={vueLogo} width="70" className={classes.imgLogo} />
+                                                        <img src={angularLogo} width="72" className={classes.imgLogo} />
+
+                                                </div>
+
+                                                <div className="col">
+                                                        <img src={vueLogo} width="60" className={` mt-2 ${classes.imgLogo}`} />
                                                 </div>
                                         </div>
-                                        </div>
                                 </div>
+                                {/* ----------------------------------END-FRONTEND-CARD--------------------------------- */}
+                
+                                {/* -------------------------------------BACKEND-CARD--------------------------------- */}
                                 <div className={`card card-body w-100 mt-3 ${classes.frameworkCard}`}>
                                         <h5 className={classes.languageTitle}>
                                                 Backend
@@ -110,7 +105,7 @@ function Languages() {
                                         <div className="row">
                                                 <div className="col">
 
-                                                        <img src={djangoLogo} width="100" className={classes.imgLogo}/>
+                                                        <img src={djangoLogo} width="100" className={classes.imgLogo} />
                                                 </div>
                                                 <div className="col">
                                                         <img src={nodeLogo} width="100" className={classes.imgLogo} />
@@ -118,11 +113,14 @@ function Languages() {
                                         </div>
                                         <div className="row">
                                                 <div className="col">
-                                                        <img src={laravelLogo} width="110"  className={classes.imgLogo} />
+                                                        <img src={laravelLogo} width="110" className={classes.imgLogo} />
                                                 </div>
                                         </div>
                                 </div>
 
+                                {/* ----------------------------------END-BACKEND-CARD--------------------------------- */}
+                
+                                {/* -------------------------------------DATABASES-CARD--------------------------------- */}
                                 <div className={`card card-body  w-100 mt-3 ${classes.frameworkCard}`}>
                                         <h5 className={classes.languageTitle}>
                                                 Databases
@@ -132,18 +130,19 @@ function Languages() {
                                                         <img src={postgresqlLogo} width="70" className={classes.imgLogo} />
                                                 </div>
                                                 <div className="col">
-                                                        <img src={mysqlLogo} width="90"  className={classes.imgLogo}/>
+                                                        <img src={mysqlLogo} width="90" className={classes.imgLogo} />
                                                 </div>
-                                        </div>
-                                        <div className="row">
                                                 <div className="col">
                                                         <img src={mongodbLogo} className={classes.imgLogo} width="70" />
                                                 </div>
                                         </div>
-                                </div>
 
+                                </div>
+                                {/* ----------------------------------END-DATABASES-CARD--------------------------------- */}
+                
+                                {/* -------------------------------------MOBILE-CARD--------------------------------- */}
                                 <div className={`card card-body  w-100 mt-3 ${classes.frameworkCard}`}>
-                                <h5 className={classes.languageTitle}>
+                                        <h5 className={classes.languageTitle}>
                                                 Mobile
                                         </h5>
                                         <div className="row">
@@ -152,8 +151,170 @@ function Languages() {
                                                 </div>
                                         </div>
                                 </div>
+                                {/* ----------------------------------END-MOBILE-CARD--------------------------------- */}
+                
+                                {/* -------------------------------------DESKTOP-CARD--------------------------------- */}
+                                <div className={`card card-body  w-100 mt-3 ${classes.frameworkCard}`}>
+                                        <h5 className={classes.languageTitle}>
+                                                Desktop
+                                        </h5>
+                                        <div className="row">
+                                                <div className="col">
+                                                        <img src={electronLogo} width="100" className="m-3" className={classes.imgLogo} />
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>}
 
-                        </div>
+                
+                        {/*================================================DESKTOP=======================================================*/}
+
+                        {isDesktop && <div className="d-flex flex-column align-items-center justify-content-center text-center ">
+                                <div className="row d-flex flex-row align-items-center justify-content-center text-center ">
+                                        <div className="col-6">
+                
+                                {/* -------------------------------------LANGUAGES-CARD--------------------------------- */}
+                                                <div className={`card card-body w-100 mt-3 ${classes.frameworkCard}`}>
+                                                        <h5 className={` ${classes.languageTitle}`}>Languages</h5>
+
+                                                        <div className="row mt-3">
+                                                                <div className="col">
+                                                                        <img src={javascriptLogo}
+                                                                                width="60"
+                                                                                className={classes.imgLogo}
+                                                                        />
+                                                                </div>
+
+                                                                <div className="col">
+                                                                        <img src={pythonLogo} width="60" className={classes.imgLogo} />
+                                                                </div>
+                                                                <div className="col">
+                                                                        <img src={javaLogo} width="80" className={classes.imgLogo} />
+                                                                </div>
+                                                                <div className="col">
+                                                                        <img src={phpLogo} width="70" className={`mt-3 ${classes.imgLogo}`} />
+                                                                </div>
+                                                        </div>
+
+
+                                                </div>
+
+                                        </div>
+                                        {/* ----------------------------------END-LANGUAGES-CARD--------------------------------- */}
+                
+                                        {/* -------------------------------------BACKEND-CARD--------------------------------- */}
+
+                                        <div className="col-6">
+
+                                                <div className={`card card-body w-100 mt-3  ${classes.frameworkCard}`}>
+                                                        <h5 className={classes.languageTitle}>
+                                                                Backend
+                                                        </h5>
+                                                        <div className="row">
+                                                                <div className="col">
+
+                                                                        <img src={djangoLogo} width="100" className={classes.imgLogo} />
+                                                                </div>
+                                                                <div className="col">
+                                                                        <img src={nodeLogo} width="100" className={classes.imgLogo} />
+                                                                </div>
+                                                        </div>
+                                                        <div className="row">
+                                                                <div className="col">
+                                                                        <img src={laravelLogo} width="110" className={classes.imgLogo} />
+                                                                </div>
+                                                        </div>
+                                                </div>
+
+                                        </div> {/* end col */}
+                                        {/* ----------------------------------END-BACKEND-CARD--------------------------------- */}
+                
+                                        {/* -------------------------------------FRONTEND-CARD--------------------------------- */}
+                                        <div className="col-6">
+                                                <div className={`card card-body w-100 mt-3 ${classes.frameworkCard}`}>
+                                                        <h5 className={classes.languageTitle}>
+                                                                Frontend
+                                                        </h5>
+                                                        <div className="row">
+                                                                <div className="col">
+                                                                        <img src={reactLogo} width="85" className={` mt-3 ${classes.imgLogo}`} />
+
+                                                                </div>
+                                                                <div className="col">
+                                                                        <img src={angularLogo} width="72" className={classes.imgLogo} />
+
+                                                                </div>
+
+                                                                <div className="col">
+                                                                        <img src={vueLogo} width="60" className={` mt-2 ${classes.imgLogo}`} />
+                                                                </div>
+
+
+                                                        </div>
+                                                </div>
+
+                                        </div>
+                                        {/* ----------------------------------END-FRONTEND-CARD--------------------------------- */}
+                
+                                        {/* -------------------------------------DATABASES-CARD--------------------------------- */}
+                                        <div className="col-6">
+                                                <div className={`card card-body  w-100 mt-3 ${classes.frameworkCard}`}>
+                                                        <h5 className={classes.languageTitle}>
+                                                                Databases
+                                                        </h5>
+                                                        <div className="row">
+                                                                <div className="col">
+                                                                        <img src={postgresqlLogo} width="70" className={classes.imgLogo} />
+                                                                </div>
+                                                                <div className="col">
+                                                                        <img src={mysqlLogo} width="90" className={classes.imgLogo} />
+                                                                </div>
+                                                                <div className="col">
+                                                                        <img src={mongodbLogo} className={classes.imgLogo} width="70" />
+                                                                </div>
+                                                        </div>
+
+                                                </div>
+                                        </div> {/* end col */}
+                                        {/* ----------------------------------END-DATABASES-CARD--------------------------------- */}
+                
+                                        {/* -------------------------------------MOBILE-CARD--------------------------------- */}
+
+                                        <div className="col-6">
+                                                <div className={`card card-body  w-100 mt-3 ${classes.frameworkCard}`}>
+                                                        <h5 className={classes.languageTitle}>
+                                                                Mobile
+                                                        </h5>
+                                                        <div className="row">
+                                                                <div className="col">
+                                                                        <img src={nativeLogo} width="150" className={`mt-4 ${classes.imgLogo}`} />
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div> {/* end col */}
+
+                                        {/* ----------------------------------END-MOBILE-CARD--------------------------------- */}
+                
+                                        {/* -------------------------------------DESKTOP-CARD--------------------------------- */}
+                                        <div className="col-6">
+                                                <div className={`card card-body  w-100 mt-3 ${classes.frameworkCard}`}>
+                                                        <h5 className={classes.languageTitle}>
+                                                                Desktop
+                                                        </h5>
+                                                        <div className="row">
+                                                                <div className="col">
+                                                                        <img src={electronLogo} width="100" className={`mt-3 ${classes.imgLogo}`} />
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div> {/* end col */}
+                                        {/* ----------------------------------END-DESKTOP-CARD--------------------------------- */}
+                
+
+                                </div> {/*row end */}
+
+                         </div>
+                        } {/*  END DESKTOP */}
                 </div>
         )
 }
