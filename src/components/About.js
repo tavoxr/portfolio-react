@@ -7,6 +7,7 @@ import NavbarContainer from './NavbarContainer'
 import useScrollToTop from '../hook/scrollTop'
 import { mobile, tablet, desktop } from '../breakpoints';
 import { useHistory } from 'react-router-dom';
+import Footer from './Footer'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -90,6 +91,7 @@ function About() {
                     {/*====================================== END DESKTOP ======================================================= */}
 
                 </div>
+                <Footer/>
             </div>
 
         </React.Fragment>

@@ -4,7 +4,7 @@ import NavbarContainer from './NavbarContainer'
 import Hero from './Header/Hero'
 import Job from './Header/Job'
 import useScrollToTop from '../hook/scrollTop'
-
+import Footer from './Footer'
 
 const useStyles = makeStyles(theme=>({
     root:{
@@ -27,6 +27,8 @@ function Header(){
             <div className={classes.toolbar} ></div>
            <Hero/>
            <Job/>
+           <Footer/>
+           
         </div>
             
     )

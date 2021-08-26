@@ -5,6 +5,8 @@ import '../static/css/projects.css'
 import NavbarContainer from './NavbarContainer'
 import useScrollToTop from '../hook/scrollTop'
 import { useMediaQuery } from 'react-responsive'
+import { mobile, tablet, desktop } from '../breakpoints'
+import Footer from './Footer'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -15,7 +17,15 @@ const useStyles = makeStyles(theme => ({
     title: {
         color: "#000",
         margin: '15px',
-        fontSize: '2rem',
+        [mobile]:{
+            fontSize: '42px'
+
+        },[tablet]:{
+            fontSize: '48px'
+        },
+        [desktop]: {
+            fontSize: '62px'
+        }
     },
 }))
 
@@ -80,7 +90,7 @@ function Projects() {
                 }
             </div>
 
-
+                <Footer/>
         </div>
 
 

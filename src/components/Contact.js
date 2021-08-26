@@ -8,26 +8,39 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import NavbarContainer from './NavbarContainer'
 import useScrollToTop from '../hook/scrollTop'
-
+import { useMediaQuery } from 'react-responsive'
+import { mobile, tablet, desktop } from '../breakpoints';
+import Footer from './Footer'
 
 const useStyles = makeStyles(theme=>({
     root:{
         minHeight: '100vh',
         backgroundColor: 'transparent',
         color: '#000',
-        fontFamily: '"Source Code Pro" , monospace',
+        
     },
     toolbar: theme.mixins.toolbar,
     glitchTitle:{
-        textTransform: 'uppercase',
+        
         fontFamily: '"Varela" , sans-serif',
-        fontSize: '2rem',
+        
         fontWeight:'normal',
         marginBottom: '30px',
+        [mobile]:{
+            fontSize: '42px'
+
+        },[tablet]:{
+            fontSize: '48px'
+        },
+        [desktop]: {
+            fontSize: '62px'
+        }
     
     },
     formCard:{
         backgroundColor: '#1E1F1F',
+        border: 'None',
+      
     },
     iconsContainer:{
         
@@ -36,18 +49,61 @@ const useStyles = makeStyles(theme=>({
         color: '#009688',
         textShadow: '0 0 0.35em #1ABC9C',
         fontSize: '50px',
+        [mobile]: {
+            fontSize: '54px',
+            marginBottom: '10px',
+            marginTop: '10px'
+        },
+        [tablet]: {
+            fontSize: '55px',
+            marginTop: '18px'
+        },
+        [desktop]: {
+            fontSize: '55px'
+        }
     },
     subtitles:{
         textAlign: 'center',
         color: '#000',
-        fontWeight: 'bolder',
+        marginBottom: '20px',
+        [mobile]: {
+            fontSize: '27px',
+            marginTop: '18px'
+        },
+        [tablet]: {
+            fontSize: '34px',
+            marginTop: '18px'
+        },
+        [desktop]: {
+            fontSize: '38px'
+        }
         
-        marginBottom: '20px'
+    },subtitlesForm:{
+        textAlign: 'center',
+        color: '#000',
+        marginBottom: '20px',
+        [mobile]: {
+            fontSize: '27px',
+            
+        },
+        [tablet]: {
+            fontSize: '34px',
+            marginTop: '18px'
+        },
+        [desktop]: {
+            fontSize: '36px'
+        }
     },
     submit:{
-        backgroundColor:'#26a69a',
+        backgroundColor:'#009688',
         color: '#fff',
         fontSize: '18px'
+
+    },
+    cardForm:{
+        marginBottom: '20px',
+       
+
 
     }
     
@@ -58,6 +114,11 @@ const useStyles = makeStyles(theme=>({
 function Contact(){
     const classes = useStyles()
     useScrollToTop()
+
+    const isMobile = useMediaQuery({ query: '(max-width:900px)' })
+    // const isTablet = useMediaQuery({ query: '(min-device-width: 768px)' })
+    const isDesktop = useMediaQuery({ query: '(min-device-width: 901px)' })
+
     
     function sendEmail(e) {
         e.preventDefault();
@@ -66,8 +127,8 @@ function Contact(){
           .then((result) => {
               console.log(result.text);
               swal({
-                  icon: "success",
-
+                title:"Your message has been successfully sent",
+                icon:"success"
               })
           }, (error) => {
               console.log(error.text);
@@ -81,16 +142,16 @@ function Contact(){
              <NavbarContainer/>
 
                 <div className={classes.toolbar}></div>
-                <div className="container">
-                <div className="d-flex flex-column justify-content-center align-items-center">
-                <h1 className={classes.glitchTitle}>Contact</h1>
+                <div className={`container ${isDesktop? "mt-4": ""}  `}>
+                <div className={`d-flex ${isDesktop? "flex-row ": "flex-column"} justify-content-center align-items-center`}>
+                {/*isMobile && <h1 className={classes.glitchTitle}>Contact</h1> */}
                 
-                <div className={`d-flex flex-column justify-content-center align-items-center ${classes.iconsContainer}`}>
+                <div className={`d-flex flex-column  ${isDesktop? "col-6": "" } justify-content-center align-items-center`}>
                 <h3 className={classes.subtitles}>My social networks</h3>
 
                    
 
-                    
+                    <div className={`d-flex ${isDesktop? "flex-row col-6": "flex-column"} justify-content-center align-items-center ${classes.iconsContainer}`}>   
                     <IconButton aria-label="" >
                         <GitHubIcon className={classes.socialIcons}/>
                     </IconButton>
@@ -100,10 +161,11 @@ function Contact(){
                     <IconButton aria-label="" >
                         <FacebookIcon className={classes.socialIcons}/>
                     </IconButton>
+                    </div>
                     
                  </div>
-                    <div className="card card-body col-12 mt-4" id="cardForm">
-                    <h3 className={classes.subtitles}>Are are interested in my job?<br/><br/>  Send me an email</h3>
+                    <div className={`card card-body ${isDesktop? "col-5": "col-12"} mt-4 ${classes.cardForm}`} id="cardForm">
+                    <h3 className={classes.subtitlesForm}>  Send me an email</h3>
                     <form className={classes.form} onSubmit={sendEmail}>
                         <div className="mb-3">
                         <label className="form-label" htmlFor="name"  >Name:</label>
@@ -126,13 +188,15 @@ function Contact(){
                         </div>
                     </form>
                     </div>
-                    <button onClick={()=> swal({ title:"Message sent successfully",icon:"success"})}>Prueba</button>
+                   
                     </div>
                     
                 
                
         </div>
             </div>
+            <Footer/>
+
         </React.Fragment>
     )
 }
