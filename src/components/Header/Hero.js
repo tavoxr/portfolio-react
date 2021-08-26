@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
     fontSize: '60px',
     '&:hover': {
-      color: 'white',
+      color: '#004d40'
     }
   },
 

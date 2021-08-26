@@ -21,10 +21,10 @@ const useStyles = makeStyles(theme => ({
             fontSize: '42px'
 
         },[tablet]:{
-            fontSize: '48px'
+            fontSize: '47px'
         },
         [desktop]: {
-            fontSize: '62px'
+            fontSize: '52px'
         }
     },
 }))
@@ -59,7 +59,7 @@ function Projects() {
 
                 {isDesktop &&
                     <React.Fragment>
-                        <h2 className={classes.title}  >Projects</h2>
+                        <h2 className={` mt-5 ${classes.title}`}  >Projects</h2>
 
                         <div className={`d-flex  flex-column `}>
 
