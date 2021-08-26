@@ -1,7 +1,5 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import theme from '../../themeConfig'
-import Typography from '@material-ui/core/Typography'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import '../../static/css/hero.css'
 import { IconButton } from '@material-ui/core'

@@ -1,7 +1,6 @@
 import React from 'react'
-import { Drawer, Divider, List,ListItem, ListItemIcon, ListItemText, IconButton, Link } from '@material-ui/core'
+import { Drawer, Divider, List,ListItem, ListItemIcon, ListItemText, IconButton } from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
-import theme from '../themeConfig'
 import HomeIcon from '@material-ui/icons/Home';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import CodeIcon from '@material-ui/icons/Code';
@@ -24,8 +23,7 @@ const useStyles = makeStyles(theme=>({
     toolbar: theme.mixins.toolbar,
     drawerPaper:{
         width: drawerWidth,
-       
-        
+               
     },
     
     closeDrawerBtn:{
@@ -33,6 +31,9 @@ const useStyles = makeStyles(theme=>({
         justifyContent: 'flex-end',
         margin: '8px',
     
+    },
+    icon:{
+        color: '#009688',
     }
 
 
@@ -41,8 +42,6 @@ function NavigationDrawer(props){
 
     const classes = useStyles()
     const history = useHistory();
-
-
 
     return(
         <Drawer
@@ -67,32 +66,29 @@ function NavigationDrawer(props){
          <List >
             <ListItem button onClick={()=> history.push("/")} >
                 <ListItemIcon >
-                    <HomeIcon/>
+                    <HomeIcon />
                 </ListItemIcon>
-                <ListItemText primary="<Home/>" />
+                <ListItemText className={classes.icon} primary="Home" />
             </ListItem>
             <ListItem button onClick={()=> history.push("/about")}>
                 <ListItemIcon >
-                    <FaceIcon/>
+                    <FaceIcon />
                 </ListItemIcon>
-                <ListItemText primary="<About/>" />
+                <ListItemText className={classes.icon} primary="About" />
             </ListItem>
             <ListItem button onClick={()=> history.push("/projects")}>
                 <ListItemIcon >
-                    <CodeIcon/>
+                    <CodeIcon />
                 </ListItemIcon>
-                <ListItemText primary="<Projects/>" />
+                <ListItemText   className={classes.icon} primary="Projects" />
             </ListItem>
             <ListItem button onClick={()=> history.push("/contact")}>
                 <ListItemIcon >
-                    <ContactMailIcon/>
+                    <ContactMailIcon />
                 </ListItemIcon>
-                <ListItemText primary="<Contact/>" />
+                <ListItemText className={classes.icon}  primary="Contact" />
             </ListItem>
          </List>
-        
-
-
       </Drawer>
     )
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, makeStyles, Button } from '@material-ui/core';
 import profileImg from '../../static/images/foto.jpeg'
 import { useHistory } from 'react-router-dom';
-import theme from '../../themeConfig';
 import { useMediaQuery } from 'react-responsive'
 import { mobile, tablet, desktop } from '../../breakpoints';
 
@@ -148,6 +147,8 @@ const Job = (props) => {
                         <div className={classes.imgContainer} >
                             <img className={classes.photoBio}
                                 src={profileImg}
+                                alt="personalPhoto"
+                                
                             />
                         </div>
 
@@ -175,10 +176,10 @@ const Job = (props) => {
                                 <div className={classes.imgContainer} >
                                     <img className={classes.photoBio}
                                         src={profileImg}
+                                        alt="personalPhoto"
                                     />
                                 </div>
                                 <div className="text-center">
-                                    <h1 className={classes.title1}></h1>
                                     <h1 className={classes.title1}>I'm a <span className={classes.greetingColor} >Software</span> Developer from<span className={classes.greetingColor} > Guatemala</span></h1>
                                     <h1 className={classes.title3}> </h1>
                                     <h4 className={classes.paragraph}>I've worked in  web and mobile apps with frameworks like Django, Express, React, Vue, etc.

@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import { Hidden, makeStyles } from '@material-ui/core'
 import Navbar from './Navbar'
 import NavigationDrawer from './NavigationDrawer'
-import theme from '../themeConfig'
 
 const useStyles =  makeStyles(theme=>({
     root:{

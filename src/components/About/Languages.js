@@ -25,7 +25,8 @@ const useStyles = makeStyles(theme => ({
                 fontSize: '24px',
         },
         frameworkCard: {
-                backgroundColor: '#F6F9FA',
+                background: 'linear-gradient(bottom, #e0f2f1, #fff)',
+
                 boxShadow: '2px 2px 3px grey',
                 [mobile]: {
                         boxShadow: '1px 1px 4px grey',
@@ -59,17 +60,18 @@ function Languages() {
                                                         <img src={javascriptLogo}
                                                                 width="60"
                                                                 className={classes.imgLogo}
+                                                                alt="javascript"
                                                         />
                                                 </div>
 
                                                 <div className="col">
-                                                        <img src={pythonLogo} width="60" className={classes.imgLogo} />
+                                                        <img src={pythonLogo} width="60" className={classes.imgLogo} alt="python-logo" />
                                                 </div>
                                                 <div className="col">
-                                                        <img src={javaLogo} width="80" className={classes.imgLogo} />
+                                                        <img src={javaLogo} width="80" className={classes.imgLogo} alt="java-logo"/>
                                                 </div>
                                                 <div className="col">
-                                                        <img src={phpLogo} width="70" className={`mt-3 ${classes.imgLogo}`} />
+                                                        <img src={phpLogo} width="70" className={`mt-3 ${classes.imgLogo}`} alt="php-logo" />
                                                 </div>
                                         </div>
                                 </div>
@@ -82,16 +84,16 @@ function Languages() {
                                         </h5>
                                         <div className="row">
                                                 <div className="col">
-                                                        <img src={reactLogo} width="85" className={` mt-3 ${classes.imgLogo}`} />
+                                                        <img src={reactLogo} width="85" className={` mt-3 ${classes.imgLogo}`} alt="react-logo" />
 
                                                 </div>
                                                 <div className="col">
-                                                        <img src={angularLogo} width="72" className={classes.imgLogo} />
+                                                        <img src={angularLogo} width="72" className={classes.imgLogo} alt="angular-logo" />
 
                                                 </div>
 
                                                 <div className="col">
-                                                        <img src={vueLogo} width="60" className={` mt-2 ${classes.imgLogo}`} />
+                                                        <img src={vueLogo} width="60" className={` mt-2 ${classes.imgLogo}`}  alt="vue-logo" />
                                                 </div>
                                         </div>
                                 </div>
@@ -105,15 +107,15 @@ function Languages() {
                                         <div className="row">
                                                 <div className="col">
 
-                                                        <img src={djangoLogo} width="100" className={classes.imgLogo} />
+                                                        <img src={djangoLogo} width="100" className={classes.imgLogo} alt="django-logo"/>
                                                 </div>
                                                 <div className="col">
-                                                        <img src={nodeLogo} width="100" className={classes.imgLogo} />
+                                                        <img src={nodeLogo} width="100" className={classes.imgLogo}  alt="node-logo"/>
                                                 </div>
                                         </div>
                                         <div className="row">
                                                 <div className="col">
-                                                        <img src={laravelLogo} width="110" className={classes.imgLogo} />
+                                                        <img src={laravelLogo} width="110" className={classes.imgLogo}  alt="laravel-logo"/>
                                                 </div>
                                         </div>
                                 </div>
@@ -127,13 +129,13 @@ function Languages() {
                                         </h5>
                                         <div className="row">
                                                 <div className="col">
-                                                        <img src={postgresqlLogo} width="70" className={classes.imgLogo} />
+                                                        <img src={postgresqlLogo} width="70" className={classes.imgLogo} alt="postgresql-logo"/>
                                                 </div>
                                                 <div className="col">
-                                                        <img src={mysqlLogo} width="90" className={classes.imgLogo} />
+                                                        <img src={mysqlLogo} width="90" className={classes.imgLogo} alt="mysql-logo"/>
                                                 </div>
                                                 <div className="col">
-                                                        <img src={mongodbLogo} className={classes.imgLogo} width="70" />
+                                                        <img src={mongodbLogo} className={classes.imgLogo} width="70" alt="mongodb-logo"/>
                                                 </div>
                                         </div>
 
@@ -147,7 +149,7 @@ function Languages() {
                                         </h5>
                                         <div className="row">
                                                 <div className="col">
-                                                        <img src={nativeLogo} width="150" className="m-3" className={classes.imgLogo} />
+                                                        <img src={nativeLogo} width="150"  className={`m-3 ${classes.imgLogo}`} alt="react-native-logo" />
                                                 </div>
                                         </div>
                                 </div>
@@ -160,7 +162,7 @@ function Languages() {
                                         </h5>
                                         <div className="row">
                                                 <div className="col">
-                                                        <img src={electronLogo} width="100" className="m-3" className={classes.imgLogo} />
+                                                        <img src={electronLogo} width="100" className={`m-3 ${classes.imgLogo}`} alt="electron-logo" />
                                                 </div>
                                         </div>
                                 </div>
@@ -182,17 +184,18 @@ function Languages() {
                                                                         <img src={javascriptLogo}
                                                                                 width="60"
                                                                                 className={classes.imgLogo}
+                                                                                alt="javascript-logo"
                                                                         />
                                                                 </div>
 
                                                                 <div className="col">
-                                                                        <img src={pythonLogo} width="60" className={classes.imgLogo} />
+                                                                        <img src={pythonLogo} width="60" className={classes.imgLogo} alt="python-logo" />
                                                                 </div>
                                                                 <div className="col">
-                                                                        <img src={javaLogo} width="80" className={classes.imgLogo} />
+                                                                        <img src={javaLogo} width="80" className={classes.imgLogo} alt="java-logo"/>
                                                                 </div>
                                                                 <div className="col">
-                                                                        <img src={phpLogo} width="70" className={`mt-3 ${classes.imgLogo}`} />
+                                                                        <img src={phpLogo} width="70" className={`mt-3 ${classes.imgLogo}`} alt="php-logo"  />
                                                                 </div>
                                                         </div>
 
@@ -213,15 +216,15 @@ function Languages() {
                                                         <div className="row">
                                                                 <div className="col">
 
-                                                                        <img src={djangoLogo} width="100" className={classes.imgLogo} />
+                                                                        <img src={djangoLogo} width="100" className={classes.imgLogo} alt="django-logo"/>
                                                                 </div>
                                                                 <div className="col">
-                                                                        <img src={nodeLogo} width="100" className={classes.imgLogo} />
+                                                                        <img src={nodeLogo} width="100" className={classes.imgLogo} alt="node-logo"/>
                                                                 </div>
                                                         </div>
                                                         <div className="row">
                                                                 <div className="col">
-                                                                        <img src={laravelLogo} width="110" className={classes.imgLogo} />
+                                                                        <img src={laravelLogo} width="110" className={classes.imgLogo} alt="laravel-logo" />
                                                                 </div>
                                                         </div>
                                                 </div>
@@ -237,16 +240,16 @@ function Languages() {
                                                         </h5>
                                                         <div className="row">
                                                                 <div className="col">
-                                                                        <img src={reactLogo} width="85" className={` mt-3 ${classes.imgLogo}`} />
+                                                                        <img src={reactLogo} width="85" className={` mt-3 ${classes.imgLogo}`} alt="react-logo" />
 
                                                                 </div>
                                                                 <div className="col">
-                                                                        <img src={angularLogo} width="72" className={classes.imgLogo} />
+                                                                        <img src={angularLogo} width="72" className={classes.imgLogo} alt="angular-logo"/>
 
                                                                 </div>
 
                                                                 <div className="col">
-                                                                        <img src={vueLogo} width="60" className={` mt-2 ${classes.imgLogo}`} />
+                                                                        <img src={vueLogo} width="60" className={` mt-2 ${classes.imgLogo}`} alt="vue-logo"/>
                                                                 </div>
 
 
@@ -264,13 +267,13 @@ function Languages() {
                                                         </h5>
                                                         <div className="row">
                                                                 <div className="col">
-                                                                        <img src={postgresqlLogo} width="70" className={classes.imgLogo} />
+                                                                        <img src={postgresqlLogo} width="70" className={classes.imgLogo} alt="postgres-logo"/>
                                                                 </div>
                                                                 <div className="col">
-                                                                        <img src={mysqlLogo} width="90" className={classes.imgLogo} />
+                                                                        <img src={mysqlLogo} width="90" className={classes.imgLogo} alt="mysql-logo"/>
                                                                 </div>
                                                                 <div className="col">
-                                                                        <img src={mongodbLogo} className={classes.imgLogo} width="70" />
+                                                                        <img src={mongodbLogo} className={classes.imgLogo} width="70" alt="mongodb-logo"/>
                                                                 </div>
                                                         </div>
 
@@ -287,7 +290,7 @@ function Languages() {
                                                         </h5>
                                                         <div className="row">
                                                                 <div className="col">
-                                                                        <img src={nativeLogo} width="150" className={`mt-4 ${classes.imgLogo}`} />
+                                                                        <img src={nativeLogo} width="150" className={`mt-4 ${classes.imgLogo}`}  alt="react-native-logo"/>
                                                                 </div>
                                                         </div>
                                                 </div>
@@ -303,7 +306,7 @@ function Languages() {
                                                         </h5>
                                                         <div className="row">
                                                                 <div className="col">
-                                                                        <img src={electronLogo} width="100" className={`mt-3 ${classes.imgLogo}`} />
+                                                                        <img src={electronLogo} width="100" className={`mt-3 ${classes.imgLogo}`} alt="electron-logo" />
                                                                 </div>
                                                         </div>
                                                 </div>
