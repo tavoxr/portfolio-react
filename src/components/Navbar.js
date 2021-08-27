@@ -1,10 +1,7 @@
-import React from 'react'
 import { makeStyles, AppBar, Toolbar, Typography, IconButton, Link } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu';
 import { useHistory } from 'react-router';
-import { useMediaQuery } from 'react-responsive'
-import { mobile, tablet, desktop } from '../breakpoints';
-import { react } from '@babel/types';
+import { useMediaQuery } from 'react-responsive';
 
 const drawerWidth = 250
 

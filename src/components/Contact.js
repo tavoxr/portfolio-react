@@ -115,7 +115,7 @@ function Contact(){
     const classes = useStyles()
     useScrollToTop()
 
-    const isMobile = useMediaQuery({ query: '(max-width:900px)' })
+    //const isMobile = useMediaQuery({ query: '(max-width:900px)' })
     // const isTablet = useMediaQuery({ query: '(min-device-width: 768px)' })
     const isDesktop = useMediaQuery({ query: '(min-device-width: 901px)' })
 
