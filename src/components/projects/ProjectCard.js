@@ -80,7 +80,7 @@ function ProjectCard(props) {
               </Typography>
               <Typography variant="body1" component="p" className={classes.projectTech}>
                 {props.technologies.map((tech) => {
-                  return ` ${tech} `
+                  return `- ${tech} `
                 })}
 
 
@@ -96,6 +96,9 @@ function ProjectCard(props) {
               size="small"
               className={classes.btnIcon}
               endIcon={<GitHubIcon />}
+              href={props.githubUrl}
+              target="_blank"
+
             >
               Github
             </Button>
@@ -105,6 +108,8 @@ function ProjectCard(props) {
               size="small"
               className={classes.btnIcon}
               endIcon={<VisibilityIcon />}
+              href={props.projectUrl}
+              target="_blank"
             >
               project
             </Button>

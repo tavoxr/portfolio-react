@@ -17,10 +17,10 @@ const useStyles = makeStyles(theme => ({
     title: {
         color: "#000",
         margin: '15px',
-        [mobile]:{
+        [mobile]: {
             fontSize: '42px'
 
-        },[tablet]:{
+        }, [tablet]: {
             fontSize: '47px'
         },
         [desktop]: {
@@ -47,12 +47,49 @@ function Projects() {
                 {isMobile && <div className={`d-flex  flex-column  justify-content-center align-items-center text-center`}>
                     <h2 className={classes.title}  >Projects</h2>
                     <React.Fragment>
-                        <ProjectCard title="Lizard" technologies={["django", "postgres", "ddd", "ffdsfsdf"]} imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png" />
-                        <ProjectCard title="Lizard" technologies={["django", "postgres", "ddd", "ffdsfsdf"]} imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png" />
-                        <ProjectCard title="Lizard" technologies={["django", "postgres", "ddd", "ffdsfsdf"]} imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png" />
-                        <ProjectCard title="Lizard" technologies={["django", "postgres", "ddd", "ffdsfsdf"]} imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png" />
-                        <ProjectCard title="Lizard" technologies={["django", "postgres", "ddd", "ffdsfsdf"]} imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png" />
-                        <ProjectCard title="Lizard" technologies={["django", "postgres", "ddd", "ffdsfsdf"]} imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png" />
+                        <ProjectCard title="Ecommerce Django"
+                            technologies={["Django", "Postgres", "Vanilla JS", "AWS"]}
+                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            projectUrl="https://dj-ecomm.herokuapp.com/"
+                            githubUrl="https://github.com/tavoxr/ecommerce_django_postgresql"
+                        />
+                        <ProjectCard title="Ecommerce Vue-Django"
+                            technologies={["Django","DRF", "Postgres", "Vue", "AWS"]}
+                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            projectUrl="https://vue-ecomm-tavox.netlify.app/"
+                            githubUrl="https://github.com/tavoxr/drf-ecommerce-api"
+                        />
+
+                        <ProjectCard title="To-Do-List"
+                            technologies={["Django","DRF", "React", "Postgres"]}
+                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            projectUrl="https://to-do-react-django.netlify.app/"
+                            githubUrl="https://github.com/tavoxr/to-do-django-rest-api"
+                        />
+
+
+                        <ProjectCard title="Lizard"
+                            technologies={["django", "postgres", "ddd", "ffdsfsdf"]}
+                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            projectUrl="https://weather-app-with-react.netlify.app/"
+                            githubUrl=""
+                        />
+                        <ProjectCard title="Image Search App"
+                            technologies={["React"]}
+                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            projectUrl="https://pixaimage.netlify.app/"
+                            githubUrl="https://github.com/tavoxr/image_search"
+                        />
+                        <ProjectCard title="Weather App"
+                            technologies={["React"]}
+                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            projectUrl="https://weather-app-with-react.netlify.app/"
+                            githubUrl="https://github.com/tavoxr/react-weather-app"
+                        />
+                      
+
+
+
                     </React.Fragment>
                 </div>
                 }
@@ -90,7 +127,7 @@ function Projects() {
                 }
             </div>
 
-                <Footer/>
+            <Footer />
         </div>
 
 
