@@ -77,7 +77,7 @@ function Hero() {
           <React.Fragment>
             <h1 id="greeting"><span className={`${classes.greetingColor} ${classes.title}`} >Hello</span>,</h1>
             <h1 id="titleMovil" className={classes.title}  >My name is</h1>
-            <h1 id="titleMovil2" className={classes.title} >Gustavo <span className={classes.greetingColor} >Herrera</span> </h1>
+            <h1 id="titleMovil2" className={classes.title} >Gustavo <span className={classes.greetingColor} >Men&eacute;ndez</span> </h1>
             <p className={`subtitleMovil ${classes.subtitle}`} >Welcome to my website!</p>
           </React.Fragment>
 
