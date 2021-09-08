@@ -15,6 +15,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 545,
     marginTop: '15px',
+    marginBottom: '20px',
     backgroundColor: '#212121',
     color: '#fff',
     [mobile]: {
