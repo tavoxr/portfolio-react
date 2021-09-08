@@ -7,6 +7,12 @@ import useScrollToTop from '../hook/scrollTop'
 import { useMediaQuery } from 'react-responsive'
 import { mobile, tablet, desktop } from '../breakpoints'
 import Footer from './Footer'
+import djEcomm from '../static/images/djangoEcomm.jpg'
+import djVueEcomm from '../static/images/drfVueEcom.jpg'
+import photoGallery2 from '../static/images/photoGallery2ce.jpg'
+import toDo from '../static/images/to-do.jpg'
+import weather from '../static/images/weather.jpg'
+import imgSearch from '../static/images/imgsearch.jpg'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -49,7 +55,7 @@ function Projects() {
                     <React.Fragment>
                         <ProjectCard title="Ecommerce Django"
                             technologies={["Django", "Postgres", "Vanilla JS", "AWS"]}
-                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            imageUrl={djEcomm}
                             projectUrl="https://dj-ecomm.herokuapp.com/"
                             githubUrl="https://github.com/tavoxr/ecommerce_django_postgresql"
 
@@ -57,14 +63,14 @@ function Projects() {
 
                         <ProjectCard title="Ecommerce Vue-Django"
                             technologies={["Django", "DRF", "Postgres", "Vue", "AWS"]}
-                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            imageUrl={djVueEcomm}
                             projectUrl="https://vue-ecomm-tavox.netlify.app/"
                             githubUrl="https://github.com/tavoxr/drf-ecommerce-api"
                         />
 
                         <ProjectCard title="To-Do-List"
                             technologies={["Django", "DRF", "React", "Postgres"]}
-                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            imageUrl={toDo}
                             projectUrl="https://to-do-react-django.netlify.app/"
                             githubUrl="https://github.com/tavoxr/to-do-django-rest-api"
 
@@ -72,7 +78,7 @@ function Projects() {
 
                         <ProjectCard title="Photo Gallery"
                             technologies={["Node", "Angular", "MongoDb", "AWS"]}
-                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            imageUrl={photoGallery2}
                             projectUrl="https://angular-photo-gallery.netlify.app/"
                             githubUrl="https://github.com/tavoxr/photo-gallery-api"
 
@@ -80,7 +86,7 @@ function Projects() {
 
                         <ProjectCard title="Image Search App"
                             technologies={["React"]}
-                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            imageUrl={imgSearch}
                             projectUrl="https://pixaimage.netlify.app/"
                             githubUrl="https://github.com/tavoxr/image_search"
 
@@ -88,7 +94,7 @@ function Projects() {
 
                         <ProjectCard title="Weather App"
                             technologies={["React"]}
-                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            imageUrl={weather}
                             projectUrl="https://weather-app-with-react.netlify.app/"
                             githubUrl="https://github.com/tavoxr/react-weather-app"
 
@@ -109,7 +115,7 @@ function Projects() {
                                 <div className="col-6  ">
                                     <ProjectCard title="Ecommerce Django"
                                         technologies={["Django", "Postgres", "Vanilla JS", "AWS"]}
-                                        imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                                        imageUrl={djEcomm}
                                         projectUrl="https://dj-ecomm.herokuapp.com/"
                                         githubUrl="https://github.com/tavoxr/ecommerce_django_postgresql"
 
@@ -119,7 +125,7 @@ function Projects() {
 
                                     <ProjectCard title="Ecommerce Vue-Django"
                                         technologies={["Django", "DRF", "Postgres", "Vue", "AWS"]}
-                                        imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                                        imageUrl={djVueEcomm}
                                         projectUrl="https://vue-ecomm-tavox.netlify.app/"
                                         githubUrl="https://github.com/tavoxr/drf-ecommerce-api"
                                     />
@@ -127,7 +133,7 @@ function Projects() {
                                 <div className="col-6 ">
                                     <ProjectCard title="To-Do-List"
                                         technologies={["Django", "DRF", "React", "Postgres"]}
-                                        imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                                        imageUrl={toDo}
                                         projectUrl="https://to-do-react-django.netlify.app/"
                                         githubUrl="https://github.com/tavoxr/to-do-django-rest-api"
 
@@ -136,7 +142,7 @@ function Projects() {
                                 <div className="col-6 ">
                                     <ProjectCard title="Photo Gallery"
                                         technologies={["Node", "Angular", "MongoDb", "AWS"]}
-                                        imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                                        imageUrl={photoGallery2}
                                         projectUrl="https://angular-photo-gallery.netlify.app/"
                                         githubUrl="https://github.com/tavoxr/photo-gallery-api"
 
@@ -145,7 +151,7 @@ function Projects() {
                                 <div className="col-6 ">
                                     <ProjectCard title="Image Search App"
                                         technologies={["React"]}
-                                        imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                                        imageUrl={imgSearch}
                                         projectUrl="https://pixaimage.netlify.app/"
                                         githubUrl="https://github.com/tavoxr/image_search"
 
@@ -154,7 +160,7 @@ function Projects() {
                                 <div className="col-6 ">
                                     <ProjectCard title="Weather App"
                                         technologies={["React"]}
-                                        imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                                        imageUrl={weather}
                                         projectUrl="https://weather-app-with-react.netlify.app/"
                                         githubUrl="https://github.com/tavoxr/react-weather-app"
 

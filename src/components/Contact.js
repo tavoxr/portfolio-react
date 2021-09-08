@@ -152,13 +152,13 @@ function Contact(){
                    
 
                     <div className={`d-flex ${isDesktop? "flex-row col-6": "flex-column"} justify-content-center align-items-center ${classes.iconsContainer}`}>   
-                    <IconButton aria-label="" >
+                    <IconButton aria-label="" href="https://github.com/tavoxr" target="_blank" >
                         <GitHubIcon className={classes.socialIcons}/>
                     </IconButton>
-                    <IconButton aria-label="" >
+                    <IconButton aria-label="" href="https://www.linkedin.com/in/gustavo-men%C3%A9ndez-herrera-desarrollador-web-64a0b2199/" target="_blank" >
                         <LinkedInIcon className={classes.socialIcons}/>
                     </IconButton>
-                    <IconButton aria-label="" >
+                    <IconButton aria-label="" href="https://www.facebook.com/Gustavo-Herrera-103056204574076" target="_blank" >
                         <FacebookIcon className={classes.socialIcons}/>
                     </IconButton>
                     </div>

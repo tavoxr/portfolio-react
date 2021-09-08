@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
 
   media: {
     height: 240,
-    clipPath: 'polygon(0 0, 100% 0, 100% 87%,0 100%)',
+    clipPath: 'polygon(0 0, 100% 0, 100% 93%,0 100%)',
     borderBottomLeftRadius: '5px'
   },
   textCard: {
@@ -55,6 +55,12 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#006064',
     color: '#fff',
 
+  },
+  imgCard:{
+  
+    width: '100%',
+    clipPath: 'polygon(0 0, 100% 0, 100% 94%,0 100%)',
+
   }
 
 }));
@@ -70,11 +76,13 @@ function ProjectCard(props) {
         <Card className={classes.root}>
 
           <CardActionArea>
-            <CardMedia
+            {/*<CardMedia
               className={classes.media}
               image={props.imageUrl}
               title="Contemplative Reptile"
             />
+            */}
+            <img  src={props.imageUrl} className={classes.imgCard}/>
             <CardContent>
               <Typography variant="h5" component="h5" className={classes.textCard}>
                 <span className={classes.projectTitle}>{props.title}</span>

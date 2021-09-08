@@ -2,7 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core'
 import { useMediaQuery } from 'react-responsive'
 import profileImg from '../../static/images/foto.jpeg'
-import certification from '../../static/images/diploma.png'
+import certification from '../../static/images/diploma.jpg'
 import galileoLogo from '../../static/images/galileoLogo.png'
 import { mobile, tablet, desktop } from '../../breakpoints';
 
