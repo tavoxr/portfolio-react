@@ -62,6 +62,7 @@ const useStyles = makeStyles(theme => ({
 function ProjectCard(props) {
   const classes = useStyles()
 
+
   return (
     <React.Fragment>
       <div className="col-12">
@@ -91,10 +92,11 @@ function ProjectCard(props) {
           </CardActionArea>
 
           <CardActions className="d-flex justify-content-between mt-3">
+          
             <Button
               variant="contained"
               size="small"
-              className={classes.btnIcon}
+              className={`${classes.btnIcon} me-2`}
               endIcon={<GitHubIcon />}
               href={props.githubUrl}
               target="_blank"

@@ -52,42 +52,47 @@ function Projects() {
                             imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
                             projectUrl="https://dj-ecomm.herokuapp.com/"
                             githubUrl="https://github.com/tavoxr/ecommerce_django_postgresql"
+                            
                         />
+
                         <ProjectCard title="Ecommerce Vue-Django"
-                            technologies={["Django","DRF", "Postgres", "Vue", "AWS"]}
+                            technologies={["Django", "DRF", "Postgres", "Vue", "AWS"]}
                             imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
                             projectUrl="https://vue-ecomm-tavox.netlify.app/"
                             githubUrl="https://github.com/tavoxr/drf-ecommerce-api"
                         />
 
                         <ProjectCard title="To-Do-List"
-                            technologies={["Django","DRF", "React", "Postgres"]}
+                            technologies={["Django", "DRF", "React", "Postgres"]}
                             imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
                             projectUrl="https://to-do-react-django.netlify.app/"
                             githubUrl="https://github.com/tavoxr/to-do-django-rest-api"
+
                         />
 
-
-                        <ProjectCard title="Lizard"
-                            technologies={["django", "postgres", "ddd", "ffdsfsdf"]}
+                        <ProjectCard title="Photo Gallery"
+                            technologies={["Node", "Angular", "MongoDb", "AWS"]}
                             imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
-                            projectUrl="https://weather-app-with-react.netlify.app/"
-                            githubUrl=""
+                            projectUrl="https://angular-photo-gallery.netlify.app/"
+                            githubUrl="https://github.com/tavoxr/photo-gallery-api"
+
                         />
+
                         <ProjectCard title="Image Search App"
                             technologies={["React"]}
                             imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
                             projectUrl="https://pixaimage.netlify.app/"
                             githubUrl="https://github.com/tavoxr/image_search"
+                            
                         />
+                        
                         <ProjectCard title="Weather App"
                             technologies={["React"]}
                             imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
                             projectUrl="https://weather-app-with-react.netlify.app/"
                             githubUrl="https://github.com/tavoxr/react-weather-app"
+                            
                         />
-                      
-
 
 
                     </React.Fragment>
@@ -100,26 +105,62 @@ function Projects() {
 
                         <div className={`d-flex  flex-column `}>
 
-
                             <div className="row d-flex  justify-content-center align-items-center ">
                                 <div className="col-6  ">
-                                    <ProjectCard title="Lizard" technologies={["django", "postgres", "ddd", "ffdsfsdf"]} imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png" />
+                                <ProjectCard title="Ecommerce Django"
+                            technologies={["Django", "Postgres", "Vanilla JS", "AWS"]}
+                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            projectUrl="https://dj-ecomm.herokuapp.com/"
+                            githubUrl="https://github.com/tavoxr/ecommerce_django_postgresql"
+                            
+                        />
                                 </div>
                                 <div className="col-6 ">
-                                    <ProjectCard title="Lizard" technologies={["django", "postgres", "ddd", "ffdsfsdf"]} imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png" />
+
+                                   <ProjectCard title="Ecommerce Vue-Django"
+                            technologies={["Django", "DRF", "Postgres", "Vue", "AWS"]}
+                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            projectUrl="https://vue-ecomm-tavox.netlify.app/"
+                            githubUrl="https://github.com/tavoxr/drf-ecommerce-api"
+                        />
                                 </div>
                                 <div className="col-6 ">
-                                    <ProjectCard title="Lizard" technologies={["django", "postgres", "ddd", "ffdsfsdf"]} imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png" />
+                                <ProjectCard title="To-Do-List"
+                            technologies={["Django", "DRF", "React", "Postgres"]}
+                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            projectUrl="https://to-do-react-django.netlify.app/"
+                            githubUrl="https://github.com/tavoxr/to-do-django-rest-api"
+
+                        />
                                 </div>
                                 <div className="col-6 ">
-                                    <ProjectCard title="Lizard" technologies={["django", "postgres", "ddd", "ffdsfsdf"]} imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png" />
+                                <ProjectCard title="Photo Gallery"
+                            technologies={["Node", "Angular", "MongoDb", "AWS"]}
+                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            projectUrl="https://angular-photo-gallery.netlify.app/"
+                            githubUrl="https://github.com/tavoxr/photo-gallery-api"
+
+                        />
                                 </div>
                                 <div className="col-6 ">
-                                    <ProjectCard title="Lizard" technologies={["django", "postgres", "ddd", "ffdsfsdf"]} imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png" />
+                                <ProjectCard title="Image Search App"
+                            technologies={["React"]}
+                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            projectUrl="https://pixaimage.netlify.app/"
+                            githubUrl="https://github.com/tavoxr/image_search"
+                            
+                        />
                                 </div>
-                                <div className="col-6">
-                                    <ProjectCard title="Lizard" technologies={["django", "postgres", "ddd", "ffdsfsdf"]} imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png" />
+                                <div className="col-6 ">
+                                <ProjectCard title="Weather App"
+                            technologies={["React"]}
+                            imageUrl="https://images4.alphacoders.com/587/thumb-1920-587508.png"
+                            projectUrl="https://weather-app-with-react.netlify.app/"
+                            githubUrl="https://github.com/tavoxr/react-weather-app"
+                            
+                        />
                                 </div>
+
 
                             </div>
                         </div>
